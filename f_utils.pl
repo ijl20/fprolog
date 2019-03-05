@@ -24,7 +24,19 @@
 /* GLOBAL: def_fun: used to record functor status as defined function      */
 /*                  used in wamcc_fcode                                    */
 
-:- initialization(g_assign(def_funs, [=,+,-,*,/,<,>,=<,>=,=..,if])).
+:- initialization(assign_global_var(def_funs, [=,+,-,*,/,<,>,=<,>=,=..,if])).
+
+/***************************************************************************/
+/* Utility functions                                                       */
+
+assign_global_var(Atom,Value) :- /* if */ current_predicate(nb_setval/_) ->
+                                 /* then */ nb_setval(Atom,Value);
+                                 /* else */ g_assign(Atom,Value).
+
+read_global_var(Atom,Value) :- /* if */ current_predicate(nb_setval/_) ->
+                                 /* then */ nb_getval(Atom,Value);
+                                 /* else */ g_read(Atom,Value).
+
 
 
 /***************************************************************************/
@@ -41,6 +53,7 @@
              '$fun_=..'/2 ]).
 
 /***************************************************************************/
+/* Various pre-defined functions in fprolog relational format              */
 
 '$fun_='([X,X],true) :- !.
 '$fun_='(_, false).

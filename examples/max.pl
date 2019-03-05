@@ -5,3 +5,4 @@ fun max([X]) = X;
 fun max2(X,Y) = if (X > Y) then X else Y.
 
 max(L,N) :- N = max(L).
+
