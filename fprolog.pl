@@ -29,26 +29,52 @@
 
 /***************************************************************************/
 /* Utility functions                                                       */
+/***************************************************************************/
 
+%
+% Read/Write global variables, gprolog and swipl compatible
+%
+% Global var 'Atom' is set to value 'Value'
 assign_global_var(Atom,Value) :- /* if */ current_predicate(nb_setval/_) ->
                                  /* then */ nb_setval(Atom,Value);
                                  /* else */ g_assign(Atom,Value).
 
+% Value of global var 'Atom' is read into Value
 read_global_var(Atom,Value) :- /* if */ current_predicate(nb_setval/_) ->
                                  /* then */ nb_getval(Atom,Value);
                                  /* else */ g_read(Atom,Value).
 
+%
+% Read a file 'Filename' which contains an fprolog program, into list Prog
+%
 read_fprolog_file(Filename,Prog) :- open(Filename,read,Stream), 
-                                    read_fprolog_prog(Stream,Prog), 
+                                    read_fprolog_stream(Stream,Prog), 
                                     close(Stream).
 
-read_fprolog_prog(Stream,[X|L]) :- read(Stream,X), 
-                                   ( /* if */ at_end_of_stream(Stream) -> 
-                                     /* then */ L = [] ; 
-                                     /* else */ read_fprolog_prog(Stream,L)
-                                   ).
+% Utility relation used by read_fprolog_file, which reads fprolog code from
+% stream.
+read_fprolog_stream(Stream,[X|L]) :- read(Stream,X), 
+                                     ( /* if */ at_end_of_stream(Stream) -> 
+                                       /* then */ L = [] ; 
+                                       /* else */ read_fprolog_prog(Stream,L)
+                                     ).
 
+% Utility relation, assert all clauses of an fprolog program, in order.
+assert_list([]).
+assert_list([X|L]) :- assertz(X), assert_list(L).
 
+%
+% Consult an fprolog file
+%
+fconsult(Filename) :- read_fprolog_file(Filename, Prog),
+                      % Prog contains the code as a list of Prolog clauses
+                      % Now we convert the function definitions to relations
+                      % and flatten clause bodies containing function calls
+                      % into the equivalent preceding relational calls.
+                      prog_to_fcode(Prog, Fcode),
+                      % And finally we assert the resulting Prolog clauses
+                      % into the database.
+                      assert_list(Fcode).
 
 /***************************************************************************/
 
