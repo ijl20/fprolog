@@ -1,0 +1,635 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=latex 97.5.5)  8 OCT 1997 16:24
+**makebst
+(makebst.tex
+LaTeX2e <1996/12/01> patch level 1
+\outfile=\write3
+\ttyin=\read1
+\infile=\read2
+\ttyout=\write4
+\hours=\count79
+\minutes=\count80
+***********************************
+* This is Make Bibliography Style *
+***********************************
+It makes up a docstrip batch job to produce
+a customized .bst file for running with BibTeX
+Do you want a description of the usage? (NO)
+
+\yn=y
+In the interactive dialogue that follows,
+you will be presented with a series of menus.
+In each case, one answer is the default, marked as (*),
+and a mere carriage-return is sufficient to select it.
+(If there is no * choice, then the default is the last choice.)
+For the other choices, a letter is indicated
+in brackets for selecting that option. If you select
+a letter not in the list, default is taken.
+
+The final output is a file containing a batch job
+which may be (La)TeXed to produce the desired BibTeX
+bibliography style file. The batch job may be edited
+to make minor changes, rather than running this program
+once again.
+
+Enter the name of the MASTER file (default=merlin.mbs)
+
+\mfile=
+
+Name of the final OUTPUT .bst file? (default extension=bst)
+
+\ofile=ijl20
+
+Give a comment line to include in the style file.
+Something like for which journals it is applicable.
+
+\ans=Style file for logic and functions: Ian J Lewis 1997
+(merlin.mbs
+<<< For more information about the meanings of
+<<< the various options, see the section on 
+<<< Menu Information in the .mbs file documentation.
+
+EXTERNAL FILES:
+
+Name of language definition file (default=merlin.mbs)
+
+\cfile=
+
+Include file(s) for extra journal names? (NO)
+
+\yn=
+
+INTERNAL LANGUAGE SUPPORT:
+(*) English words used explicitly
+(b) Babel (words replaced by commands defined in babelbst.tex)
+  Select:
+
+\ans=
+  You have selected: English
+
+STYLE OF CITATIONS:
+(*) Numerical as in standard LaTeX
+(a) Author-year with some non-standard interface
+(b) Alpha style (labels like DAL90)
+(c) Cite key (special for listing contents of bib file)
+  Select:
+
+\ans=
+  You have selected: Numerical
+
+ORDERING OF REFERENCES:
+(*) Alphabetical by all authors
+(c) Citation order (unsorted, like unsrt.bst)
+(d) Year ordered and then by authors
+  Select:
+
+\ans=
+  You have selected: Alphabetical
+
+ORDER ON VON PART:
+(*) Sort on von part (de la Maire before Defoe)
+(x) Sort without von part (de la Maire after Mahone)
+  Select:
+
+\ans=
+  You have selected: Sort on von part
+
+AUTHOR NAMES:
+(*) Full, surname last (John Frederick Smith)
+(f) Full, surname first (Smith, John Frederick)
+(i) Initials + surname (J. F. Smith)
+(r) Surname + initials (Smith, J. F.)
+(s) Surname + dotless initials (Smith J F)
+(x) Surname + pure initials (Smith JF)
+(y) Surname + spaceless initials (Smith J.F.)
+(a) Only first name reversed, initials (AGU style: Smith, J. F., H. K. Jones)
+(b) First name reversed, with full names (Smith, John Fred, Harry Kab Jones)
+  Select:
+
+\ans=r
+  You have selected: Surname + initials
+
+EDITOR NAMES IN COLLECTIONS:
+(*) Editor names NOT reversed as edited by J. J. Smith
+(r) Editor names reversed just like authors'
+  Select:
+
+\ans=
+  You have selected: Editor names NOT reversed
+
+PUNCTUATION BETWEEN AUTHOR NAMES:
+(*) Author names separated by commas 
+(s) Names separated by semi-colon 
+  Select:
+
+\ans=
+  You have selected: Author names separated by commas
+
+ADJACENT REFERENCES WITH REPEATED NAMES:
+(*) Author/editor names always present 
+(d) Repeated author/editor names replaced by dash 
+  Select:
+
+\ans=
+  You have selected: Author/editor names always present
+
+NUMBER OF AUTHORS:
+(*) All authors included in listing
+(l) Limited authors (et al replaces missing names)
+  Select:
+
+\ans=
+  You have selected: All authors
+
+TYPEFACE FOR AUTHORS IN LIST OF REFERENCES:
+(*) Normal font for authors 
+(s) Small caps authors (\sc)
+(i) Italic authors (\it or \em)
+(b) Bold authors (\bf)
+  Select:
+
+\ans=s
+  You have selected: Small caps authors
+
+FONT FOR `AND' THE IN LIST:
+(*) `And' in author font (JONES AND JAMES)
+(r) `And' in normal font (JONES and JAMES)
+  Select:
+
+\ans=
+  You have selected: `And' in author font
+
+DATE POSITION:
+(*) Date at end 
+(b) Date after authors 
+(j) Date part of journal spec. (as 1994;45:34-40) else at end
+(e) Date at very end after any notes
+  Select:
+
+\ans=
+  You have selected: Date at end
+
+DATE FORMAT:
+(*) Plain month and year without any brackets
+(p) Date in parentheses as (May 1993)
+(b) Date in brackets as [May 1993]
+(c) Date preceded by colon as `: May 1993'
+(d) Date preceded by period as `. May 1993'
+(m) Date preceded by comma as `, May 1993'
+(s) Date preceded by space only, as ` May 1993'
+  Select:
+
+\ans=
+  You have selected: Plain month and year
+
+REVERSED DATE:
+(*) Date as month year 
+(r) Date as year month 
+  Select:
+
+\ans=
+  You have selected: Date as month year
+
+DATE FONT:
+(*) Date in normal font 
+(b) Date in bold face 
+  Select:
+
+\ans=
+  You have selected: Date in normal font
+
+TITLE OF ARTICLE:
+(*) Title plain with no special font
+(i) Title italic (\em)
+(q) Title and punctuation in single quotes (`Title,' ..)
+(d) Title and punctuation in double quotes (``Title,'' ..)
+(x) Title in single quotes (`Title', ..)
+(y) Title in double quotes (``Title'', ..)
+  Select:
+
+\ans=i
+  You have selected: Title italic
+
+CAPITALIZATION OF ARTICLE TITLE:
+(*) Sentence style (first word and those in braces)
+(t) Title style (just as in bib entry)
+  Select:
+
+\ans=
+  You have selected: Sentence style
+
+ARTICLE TITLE PRESENT:
+(*) Article title present in journals and proceedings
+(x) No article title 
+  Select:
+
+\ans=
+  You have selected: Article title present
+
+JOURNAL NAMES:
+(*) Periods in journal names are retained, as `Phys. Rev.'
+(x) Dotless journal names as `Phys Rev'
+  Select:
+
+\ans=
+  You have selected: Periods in journal names
+
+JOURNAL TITLE FONT:
+(*) Journal title italics 
+(r) Journal title normal font
+  Select:
+
+\ans=r
+  You have selected: Journal title normal
+
+THESIS TITLE:
+(*) Thesis titles like books 
+(a) Thesis title like article 
+  Select:
+
+\ans=
+  You have selected: Thesis titles like books
+
+TECHNICAL REPORT TITLE:
+(*) Tech. report title like articles 
+(b) Tech. report title like books 
+  Select:
+
+\ans=
+  You have selected: Tech. report title like articles
+
+TECHNICAL REPORT NUMBER:
+(*) Tech. report and number plain as `Tech. Rep. 123'
+(i) Tech. report and number italic as `{\it Tech. Rep. 123'}
+  Select:
+
+\ans=
+  You have selected: Tech. report and number plain
+
+JOURNAL VOLUME NUMBER:
+(*) Volume plain as vol(num)
+(i) Volume italic as {\em vol}(num)
+(b) Volume bold as {\bf vol}(num)
+(d) Volume and number bold as {\bf vol(num)}
+  Select:
+
+\ans=
+  You have selected: Volume plain
+
+JOURNAL VOL AND NUMBER:
+(*) Journal vol(num) as 34(2)
+(s) Journal vol (num) as 34 (2)
+(c) Journal vol, num as 34, 2
+(n) Journal vol, no. num as 34, no. 2
+(h) Journal vol, \# number as 34, \#2
+(p) Journal vol, number(page) as 34, (2)33
+(d) Journal vol (year) num as 34 (1994) 2
+(x) Journal vol, no number as 34
+  Select:
+
+\ans=
+  You have selected: Journal vol(num)
+
+VOLUME PUNCTUATION:
+(*) Volume with colon as vol(num):ppp
+(s) Volume with colon and space as vol(num): ppp
+(h) Volume with semi-colon as vol(num); ppp
+(c) Volume with comma as vol(num), ppp
+(b) Volume with blank as vol(num) ppp
+(d) Volume with date as vol(num), date ppp
+  Select:
+
+\ans=c
+  You have selected: Volume with comma
+
+PAGE NUMBERS:
+(*) Start and stop page numbers given
+(f) Only start page number 
+  Select:
+
+\ans=
+  You have selected: Start and stop page numbers
+
+WORD `PAGE' IN ARTICLES:
+(*) Article pages numbers only as 234-256
+(p) Include `page' in articles as pp. 234--256
+  Select:
+
+\ans=p
+  You have selected: Include `page' in articles
+
+POSITION OF PAGES:
+(*) Pages given mid text as is normal
+(e) Pages at end but before any notes
+  Select:
+
+\ans=
+  You have selected: Pages given mid text
+
+WORD `VOLUME' IN ARTICLES:
+(*) Article volume as number only as 21
+(p) Include `volume' in articles as vol. 21
+  Select:
+
+\ans=
+  You have selected: Article volume as number only
+
+JOURNAL NAME PUNCTUATION:
+(*) Comma after journal name
+(x) Space after journal name
+  Select:
+
+\ans=
+  You have selected: Comma after journal
+
+BOOK TITLE:
+(*) Book title italic (\em)
+(p) Book title plain (no font command)
+  Select:
+
+\ans=
+  You have selected: Book title italic
+
+PAGES IN BOOKS:
+(*) Book pages normal as pp. 50-55
+(p) Book pages in parentheses as (pp. 50-55)
+  Select:
+
+\ans=
+  You have selected: Book pages normal
+
+PUBLISHER ADDRESS:
+(*) Publisher, address as Harcourt, New York
+(a) Address: Publisher as New York: Harcourt
+  Select:
+
+\ans=
+  You have selected: Publisher, address
+
+PUBLISHER IN PARENTHESES:
+(*) Publisher as normal block without parentheses
+(p) Publisher in parentheses 
+(d) Publisher and date in parentheses (Oxford, 1994)
+  Select:
+
+\ans=
+  You have selected: Publisher as normal block
+
+PUBLISHER POSITION:
+(*) Publisher after chapter, pages 
+(p) Publisher before chapter, pages 
+(e) Publisher after edition 
+  Select:
+
+\ans=
+  You have selected: Publisher after chapter, pages
+
+ISBN NUMBER:
+(*) Include ISBN for books, booklets, etc.
+(x) No ISBN 
+  Select:
+
+\ans=x
+  You have selected: No ISBN
+
+`EDITOR' AFTER NAMES:
+(*) Word `editor' after name of book editor without author
+(a) `Name (editor),' in parentheses, after name, comma after
+(c) `Name, (editor)' in parentheses, after name, comma between
+  Select:
+
+\ans=
+  You have selected: Word `editor' after name
+
+EDITOR IN COLLECTIONS:
+(*) .., editor, booktitle of collection
+(b) Booktitle, edited by ..  
+(p) Booktitle (edited by ..) 
+(e) Booktitle, editor .. 
+(k) Booktitle (editor..) 
+(j) Booktitle, .., editor 
+(m) Booktitle (.., editor) 
+  Select:
+
+\ans=e
+  You have selected: Booktitle, editor ..
+
+PUNCTUATION BETWEEN SECTIONS (BLOCKS):
+(*) \newblock after blocks (periods or new lines with openbib option)
+(c) Comma between blocks 
+(s) Semi-colon between blocks 
+(b) Blanks between blocks 
+(t) Period after titles of articles, books, etc else commas
+(a) Period after titles of articles else commas
+  Select:
+
+\ans=
+  You have selected: \newblock after blocks
+
+PUNCTUATION AFTER AUTHORS:
+(*) Author block normal with regular block punctuation
+(c) Author block with colon 
+  Select:
+
+\ans=
+  You have selected: Author block normal
+
+PUNCTUATION AFTER `IN':
+(*) Space after `in' for edited works or proceedings
+(c) Colon after `in' (as `In: ...')
+(x) No word `in' for edited works
+  Select:
+
+\ans=
+  You have selected: Space after `in'
+
+FINAL PUNCTUATION:
+(*) Period at very end of the listed reference
+(x) No period at end 
+  Select:
+
+\ans=
+  You have selected: Period at very end
+
+ABBREVIATE WORD `PAGES':
+(*) `Page(s)' (no abbreviation)
+(a) `Page' abbreviated as p. or pp.
+(x) `Page' omitted 
+  Select:
+
+\ans=a
+  You have selected: `Page' abbreviated
+
+ABBREVIATE WORD `EDITORS':
+(*) `Editor(s)' (no abbreviation)
+(a) `Editor' abbreviated as ed. or eds.
+  Select:
+
+\ans=a
+  You have selected: `Editor' abbreviated
+
+OTHER ABBREVIATIONS:
+(*) No abbreviations of volume, edition, chapter, etc
+(a) Abbreviations of such words
+  Select:
+
+\ans=a
+  You have selected: Abbreviations
+
+ABBREVIATION FOR `EDITION':
+(*) `Edition' abbreviated as `edn' 
+(a) `Edition' abbreviated as `ed' 
+  Select:
+
+\ans=a
+  You have selected: `Edition' abbreviated as `ed'
+
+MONTHS WITH DOTS:
+(*) Months with dots as Jan.
+(x) Months without dots as Feb Mar
+  Select:
+
+\ans=
+  You have selected: Months with dots
+
+EDITION NUMBERS:
+(*) Write out editions as first, second, third, etc
+(n) Numerical editions as 1st, 2nd, 3rd, etc
+  Select:
+
+\ans=
+  You have selected: Write out editions
+
+STORED JOURNAL NAMES:
+(*) Full journal names for prestored journals
+(a) Abbreviated journal names 
+  Select:
+
+\ans=a
+  You have selected: Abbreviated journal names
+
+AMPERSAND:
+(*) Use word `and' in author lists
+(a) Use ampersand in place of `and'
+(v) Use \BIBand in place of `and'
+  Select:
+
+\ans=
+  You have selected: Use word `and'
+
+COMMA BEFORE `AND':
+(*) Comma before `and' as `Tom, Dick, and Harry'
+(n) No comma before `and' as `Tom, Dick and Harry'
+(c) Comma with 2 authors as `Tom, and Harry'
+  Select:
+
+\ans=
+  You have selected: Comma before `and'
+
+NO `AND' IN REFERENCE LIST:
+(*) With `and' before last author in reference list
+(x) No `and' as `Tom, Dick, Harry'
+  Select:
+
+\ans=
+  You have selected: With `and'
+
+FONT OF `ET AL':
+(*) Plain et al 
+(i) Italic et al 
+(r) Roman et al even when authors something else
+  Select:
+
+\ans=i
+  You have selected: Italic et al
+
+EMPHASIS:
+(affects all so-called italics)
+(*) Use emphasis ie, \em, allows font switching
+(i) Use true italics ie, \it, absolute italics
+(x) No italics at all
+  Select:
+
+\ans=
+  You have selected: Use emphasis
+
+NEW FONT SELECTION SCHEME:
+(*) No NFSS use 2.09 font commands
+(n) NFSS use \textbf, \emph, not \bf, \em
+  Select:
+
+\ans=n
+  You have selected: NFSS
+)
+
+Finished!!
+Batch job written to file `ijl20.dbj'
+Shall I now run this batch job? (NO)
+
+\yn=y
+(ijl20.dbj (/usr/lib/tex/macros/latex2e/base/docstrip.tex
+\blockLevel=\count81
+\emptyLines=\count82
+\processedLines=\count83
+\commentsRemoved=\count84
+\commentsPassed=\count85
+\codeLinesPassed=\count86
+\NumberOfFiles=\count87
+\TotalprocessedLines=\count88
+\TotalcommentsRemoved=\count89
+\TotalcommentsPassed=\count90
+\TotalcodeLinesPassed=\count91
+\inFile=\read3
+\inputcheck=\read4
+\off@0=\count92
+\off@1=\count93
+\off@2=\count94
+\off@3=\count95
+\off@4=\count96
+\off@5=\count97
+\off@6=\count98
+\off@7=\count99
+\off@8=\count100
+\off@9=\count101
+\off@10=\count102
+\off@11=\count103
+\off@12=\count104
+\off@13=\count105
+\off@14=\count106
+\off@15=\count107
+\@maxfiles=\count108
+\@maxoutfiles=\count109
+
+Utility: `docstrip' 2.4g <1996/12/13>
+English documentation    <1996/12/13>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./ijl20.bst 
+
+Processing file merlin.mbs (,nm-rev,nmft-sc,tit-it,jttl-rm,volp-com,jwdpg,edby,
+edbyx,pp,ed,abr,ednx,jabr,etal-it,nfss) -> ijl20.bst
+Lines  processed: 6137
+Comments removed: 2134
+Comments  passed: 0
+Codelines passed: 2867
+
+ ) ) 
+Here is how much of TeX's memory you used:
+ 639 strings out of 10947
+ 5128 string characters out of 73400
+ 54513 words of memory out of 262141
+ 3552 multiletter control sequences out of 9500
+ 3640 words of font info for 14 fonts, out of 100000 for 255
+ 14 hyphenation exceptions out of 607
+ 15i,0n,15p,136b,324s stack positions out of 300i,100n,60p,3000b,4000s
+
+No pages of output.

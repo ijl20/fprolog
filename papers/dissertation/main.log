@@ -1,0 +1,1205 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=latex 97.5.5)  12 JAN 1998 14:48
+**main
+(main.tex
+LaTeX2e <1996/12/01> patch level 1
+(/usr/lib/tex/macros/latex2e/base/report.cls
+Document Class: report 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/lib/tex/macros/latex2e/base/size11.clo
+File: size11.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/lib/tex/macros/psfig/psfig.tex
+\@unused=\write3
+
+psfig/tex 1.9
+\ps@stream=\read1
+\p@intvaluex=\dimen103
+\p@intvaluey=\dimen104
+) (rotating.sty
+Package: rotating 95/01/06 2.6 Rotation package
+ (/usr/lib/tex/macros/latex2e/packages/graphics/graphicx.sty
+Package: graphicx 1996/10/31 v1.0c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/lib/tex/macros/latex2e/packages/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+)
+(/usr/lib/tex/macros/latex2e/packages/graphics/graphics.sty
+Package: graphics 1996/10/31 v1.0c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/lib/tex/macros/latex2e/packages/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+)
+(/usr/lib/tex/macros/latex2e/packages/graphics/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+
+(/usr/lib/tex/macros/latex2e/packages/graphics/dvips.def
+File: dvips.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(/usr/lib/tex/macros/latex2e/base/ifthen.sty
+Package: ifthen 1996/08/02 v1.0m Standard LaTeX ifthen package (DPC)
+)
+\r@tfl@t=\count88
+\rot@float@box=\box26
+)
+(/usr/lib/tex/macros/contrib/subfigure.sty
+\c@subfigure=\count89
+)
+(/usr/lib/tex/macros/latex2e/base/latexsym.sty
+Package: latexsym 1996/11/20 v2.2d Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 85.
+)
+(/usr/lib/tex/macros/latex2e/base/alltt.sty
+Package: alltt 1995/07/24 v2.0f defines alltt environment
+) (main.aux (title/title.aux)
+(intro/intro.aux) (background/background.aux) (bfp_depth/bfp_depth.aux)
+(cut/cut.aux) (functions/functions.aux) (case/case.aux) (kappa/kappa.aux)
+(sok/sok.aux) (conclusions/conclusions.aux) (system/system.aux)
+(benchmarks/benchmarks.aux) (kappa_macro/kappa_macro.aux)
+(references/references.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+ (title/title.tex
+psfig: searching title/ps/culogo.ps for bounding box
+psfig: including title/ps/culogo.ps 
+[1
+
+
+] [2
+
+] (abstract/abstract.tex) [1] [2
+
+] (acknowledgements/acknowledgements.tex) [3] [4] (main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
+ (/usr/lib/tex/macros/latex2e/base/ulasy.fd
+File: ulasy.fd 1996/11/20 v2.2dLaTeX symbol font definitions
+) [5
+
+
+] [6]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 183.
+)
+\tf@toc=\write4
+
+[7] (main.lof
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [8
+
+]
+[9])
+\tf@lof=\write5
+ [10] (main.lot)
+\tf@lot=\write6
+ [11
+
+] [12
+
+]) (intro/intro.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+(/usr/lib/tex/macros/latex2e/base/omscmr.fd
+File: omscmr.fd 1997/01/14 v2.5a Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+ [1
+
+
+
+] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 190--195
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[5] [6]
+psfig: searching intro/ps/and_or_tree.ps for bounding box
+psfig: including intro/ps/and_or_tree.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7]
+psfig: searching intro/ps/or_only_tree.ps for bounding box
+psfig: including intro/ps/or_only_tree.ps 
+
+Overfull \hbox (18.83958pt too wide) detected at line 368
+ []  
+ []
+
+psfig: searching intro/ps/oracle_tree.ps for bounding box
+psfig: including intro/ps/oracle_tree.ps 
+[8] [9] [10] [11] [12]
+psfig: searching intro/ps/cut_tree.tgif.eps for bounding box
+psfig: including intro/ps/cut_tree.tgif.eps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+psfig: searching intro/ps/fun_tree3.tgif.eps for bounding box
+psfig: including intro/ps/fun_tree3.tgif.eps 
+[15]
+psfig: searching intro/ps/fun_tree4.tgif.eps for bounding box
+psfig: including intro/ps/fun_tree4.tgif.eps 
+[16]) [17] [18] (background/background.tex
+Chapter 2.
+psfig: searching background/ps/or_parallelism.ps for bounding box
+psfig: including background/ps/or_parallelism.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19
+
+
+
+]
+psfig: searching background/ps/and_parallelism.ps for bounding box
+psfig: including background/ps/and_parallelism.ps 
+[20]
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 80.
+
+LaTeX Font Info:    No file OMScmtt.fd. on input line 80.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 80.
+
+psfig: searching background/ps/or_context.ps for bounding box
+psfig: including background/ps/or_context.ps 
+[21]
+Underfull \vbox (badness 5862) has occurred while \output is active []
+
+ [22]
+[23] [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26]
+Overfull \hbox (1.6641pt too wide) in paragraph at lines 351--353
+[]\OT1/cmr/m/n/10.95 Subgoals shar-ing no vari-ables are ex-e-cuted
+ []
+
+
+Overfull \hbox (4.48335pt too wide) in paragraph at lines 355--359
+[]\OT1/cmr/m/n/10.95 The com-mu-ni-ca-tion of so-lu-tions (i.e. vari-able bind-
+ings) be-tween AND-parallel
+ []
+
+psfig: searching background/ps/stream.ps for bounding box
+psfig: including background/ps/stream.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27]
+Overfull \hbox (5.12212pt too wide) in paragraph at lines 397--401
+[]\OT1/cmr/m/n/10.95 The treat-ment of vari-ables in Par-log in op-ti-mised for
+ stream AND-parallelism,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+[29]
+Overfull \hbox (1.44173pt too wide) in paragraph at lines 461--465
+[]\OT1/cmr/m/n/10.95 The sys-tem pro-vides ef-fi-cient sup-port for the com-mu-
+ni-ca-tion of val-ues though
+ []
+
+psfig: searching background/ps/epilog.ps for bounding box
+psfig: including background/ps/epilog.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30] [31] [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
+
+ []
+
+[35]
+Overfull \hbox (11.20543pt too wide) in paragraph at lines 745--749
+[]\OT1/cmr/m/n/10.95 This ap-proach ad-dresses the is-sue of com-plete-ness in 
+depth-first SLD-resolution
+ []
+
+[36]
+Overfull \hbox (2.27487pt too wide) in paragraph at lines 787--795
+[]\OT1/cmr/m/it/10.95 Non-ambiguity\OT1/cmr/m/n/10.95 . If the out-er-most func
+-tion sym-bol of a term $\OML/cmm/m/it/10.95 t$ \OT1/cmr/m/n/10.95 is $[](\OML/
+cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 )$
+ []
+
+[37]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 848.
+ [38] [39] [40] [41]
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 1048--1048
+[]\OT1/cmtt/m/n/10.95 plus(X,Y,Z) :- Z is X + Y.  % standard Prolog clause defi
+nition[] 
+ []
+
+
+Overfull \hbox (9.89693pt too wide) in paragraph at lines 1051--1053
+[]\OT1/cmr/m/n/10.95 The ap-pear-ance of an ar-gu-ment term \OT1/cmtt/m/n/10.95
+ plus(3,4) \OT1/cmr/m/n/10.95 any-where in a PrologPF
+ []
+
+[42]
+Overfull \hbox (4.6854pt too wide) in paragraph at lines 1101--1105
+\OT1/cmr/m/n/10.95 treats all func-tion ap-pli-ca-tions as to one ar-gu-ment. F
+or ex-am-ple \OT1/cmtt/m/n/10.95 plus(3,4,R)
+ []
+
+[43]
+psfig: searching background/ps/orc_tree.ps for bounding box
+psfig: including background/ps/orc_tree.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+psfig: searching background/ps/architecture.ps for bounding box
+psfig: including background/ps/architecture.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[46] [47] [48] [49] [50]
+psfig: searching background/ps/part_right.ps for bounding box
+psfig: including background/ps/part_right.ps 
+[51]
+psfig: searching background/ps/part_central.ps for bounding box
+psfig: including background/ps/part_central.ps 
+[52] [53]
+psfig: searching background/ps/bfp_phase1.ps for bounding box
+psfig: including background/ps/bfp_phase1.ps 
+psfig: searching background/ps/bfp_phase2.ps for bounding box
+psfig: including background/ps/bfp_phase2.ps 
+
+Overfull \hbox (23.85832pt too wide) detected at line 1517
+ []  
+ []
+
+psfig: searching background/ps/bfp_vs_ap.ps for bounding box
+psfig: including background/ps/bfp_vs_ap.ps 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[54]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55] [56] [57]) [58] (bfp_depth/bfp_depth.tex
+Chapter 3.
+[59
+
+
+
+]
+psfig: searching bfp_depth/ps/q8_tree.ps for bounding box
+psfig: including bfp_depth/ps/q8_tree.ps 
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+[62] [63] [64]
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+[65]
+Overfull \hbox (0.6189pt too wide) in paragraph at lines 342--348
+\OT1/cmr/m/n/10.95 A query such as \OT1/cmtt/m/n/10.95 a(X) \OT1/cmr/m/n/10.95 
+will sim-i-larly be trans-formed to \OT1/cmtt/m/n/10.95 o[]follow(N), a(N,X)\OT
+1/cmr/m/n/10.95 .
+ []
+
+[66] [67]
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 402--402
+[]\OT1/cmtt/m/n/10.95 a(X,1) :- o_build(1), o_follow(N1), b(X,N1), o_follow(N2)
+, c(X,N2).[] 
+ []
+
+[68]
+Overfull \hbox (3.84462pt too wide) in paragraph at lines 441--448
+\OT1/cmr/m/n/10.95 The Pro-log pro-grams com-piled for the Del-phi Ma-chine and
+ with the PrologPF
+ []
+
+[69]
+psfig: searching bfp_depth/ps/single_cpu_queens8.ps for bounding box
+psfig: including bfp_depth/ps/single_cpu_queens8.ps 
+psfig: searching bfp_depth/ps/single_cpu_queens10.ps for bounding box
+psfig: including bfp_depth/ps/single_cpu_queens10.ps 
+psfig: searching bfp_depth/ps/single_cpu_pentbook.ps for bounding box
+psfig: including bfp_depth/ps/single_cpu_pentbook.ps 
+
+Overfull \hbox (54.54271pt too wide) in paragraph at lines 511--524
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--524
+
+ []
+
+[70]
+Overfull \hbox (16.03413pt too wide) in paragraph at lines 558--577
+[][] 
+ []
+
+Adding sideways figure on  left hand page
+psfig: searching bfp_depth/ps/queens8_cut_c_L_21.ps for bounding box
+psfig: including bfp_depth/ps/queens8_cut_c_L_21.ps 
+[71] [72]
+psfig: searching bfp_depth/ps/q8_cut_c_L_21_spdup.ps for bounding box
+psfig: including bfp_depth/ps/q8_cut_c_L_21_spdup.ps 
+[73]
+psfig: searching bfp_depth/ps/queens10_cut_c_L_27.ps for bounding box
+psfig: including bfp_depth/ps/queens10_cut_c_L_27.ps 
+psfig: searching bfp_depth/ps/q10_cut_c_L_27_spdup.ps for bounding box
+psfig: including bfp_depth/ps/q10_cut_c_L_27_spdup.ps 
+psfig: searching bfp_depth/ps/pentbook_cut_c_L_21.ps for bounding box
+psfig: including bfp_depth/ps/pentbook_cut_c_L_21.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 669
+ []  
+ []
+
+[74]
+psfig: searching bfp_depth/ps/pent_cut_c_L_21_spdup.ps for bounding box
+psfig: including bfp_depth/ps/pent_cut_c_L_21_spdup.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 695
+ []  
+ []
+
+[75]
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+ [76]
+[77] [78] [79]
+Overfull \hbox (31.81111pt too wide) in paragraph at lines 833--847
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--847
+
+ []
+
+[80] [81]
+psfig: searching bfp_depth/ps/pentbook_cut_c_L_24.ps for bounding box
+psfig: including bfp_depth/ps/pentbook_cut_c_L_24.ps 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
+[83]
+psfig: searching bfp_depth/ps/pent_orcs.ps for bounding box
+psfig: including bfp_depth/ps/pent_orcs.ps 
+psfig: searching bfp_depth/ps/pent_orcs_200_to_400.ps for bounding box
+psfig: including bfp_depth/ps/pent_orcs_200_to_400.ps 
+
+Overfull \hbox (1.50253pt too wide) in paragraph at lines 1094--1098
+[]\OT1/cmr/m/n/10.95 Earlier work by Saraswat [[]] at-tempted to im-prove upon 
+the sim-ple breadth-
+ []
+
+[84] [85]
+psfig: searching bfp_depth/ps/q8_cut_c_G_30_spdup.ps for bounding box
+psfig: including bfp_depth/ps/q8_cut_c_G_30_spdup.ps 
+psfig: searching bfp_depth/ps/q10_cut_c_G_30_spdup.ps for bounding box
+psfig: including bfp_depth/ps/q10_cut_c_G_30_spdup.ps 
+psfig: searching bfp_depth/ps/pent_cut_c_G_30_spdup.ps for bounding box
+psfig: including bfp_depth/ps/pent_cut_c_G_30_spdup.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 1156
+ []  
+ []
+
+[86]
+psfig: searching bfp_depth/ps/q8spdup.ps for bounding box
+psfig: including bfp_depth/ps/q8spdup.ps 
+psfig: searching bfp_depth/ps/q10spdup.ps for bounding box
+psfig: including bfp_depth/ps/q10spdup.ps 
+
+Overfull \hbox (21.85085pt too wide) detected at line 1229
+ []  
+ []
+
+psfig: searching bfp_depth/ps/pentsp.ps for bounding box
+psfig: including bfp_depth/ps/pentsp.ps 
+
+Overfull \hbox (44.93709pt too wide) detected at line 1236
+ []  
+ []
+
+[87]
+Underfull \vbox (badness 3058) has occurred while \output is active []
+
+ [88]
+[89] [90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+[92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [93]
+psfig: searching bfp_depth/ps/work_split_figure.ps for bounding box
+psfig: including bfp_depth/ps/work_split_figure.ps 
+[94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+[96]
+psfig: searching bfp_depth/ps/stream_and.ps for bounding box
+psfig: including bfp_depth/ps/stream_and.ps 
+
+Overfull \hbox (59.87231pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 3.7.  BREADTH-FIRST PARTITIONING VERSUS STREAM-AND PARALLEL
+ISM \OT1/cmr/m/n/10.95 97
+ []
+
+[97]
+Overfull \hbox (16.83136pt too wide) in paragraph at lines 1583--1587
+\OT1/cmr/m/n/10.95 al-leli-sa-tion ben-e-fits to those ob-tained with stream-AN
+D par-al-lelism for generate-
+ []
+
+
+Overfull \hbox (1.41124pt too wide) in paragraph at lines 1583--1587
+\OT1/cmr/m/n/10.95 and-test pro-grams in which the gen-er-a-tion pro-ce-dure is
+ rel-a-tively lightweight. 
+ []
+
+
+Underfull \vbox (badness 4132) has occurred while \output is active []
+
+ [98]
+[99] [100] [101]) [102] (cut/cut.tex
+Chapter 4.
+psfig: searching cut/ps/cut_and_or_tree.ps for bounding box
+psfig: including cut/ps/cut_and_or_tree.ps 
+[103
+
+
+
+]
+psfig: searching cut/ps/cut_or_only_tree.ps for bounding box
+psfig: including cut/ps/cut_or_only_tree.ps 
+[104] [105]
+Overfull \hbox (4.15727pt too wide) in paragraph at lines 130--134
+[]\OT1/cmr/m/n/10.95 This bench-mark con-tains six de-ter-min-is-tic pro-ce-dur
+es, used
+ []
+
+[106] [107]
+psfig: searching cut/ps/cut_or_only_tree2.ps for bounding box
+psfig: including cut/ps/cut_or_only_tree2.ps 
+[108]
+psfig: searching cut/ps/cut_det_tree.ps for bounding box
+psfig: including cut/ps/cut_det_tree.ps 
+
+Overfull \hbox (0.25443pt too wide) in paragraph at lines 281--286
+[]\OT1/cmr/m/n/10.95 The ex-am-ple pro-gram has one so-lu-tion for the sub-goal
+ \OT1/cmtt/m/n/10.95 p(U,V)\OT1/cmr/m/n/10.95 : \OMS/cmtt/m/n/10.95 f\OT1/cmtt/
+m/n/10.95 U=b, V=b1\OMS/cmtt/m/n/10.95 g\OT1/cmr/m/n/10.95 .
+ []
+
+[109]
+psfig: searching cut/ps/cut_det_tree2.ps for bounding box
+psfig: including cut/ps/cut_det_tree2.ps 
+[110]
+psfig: searching cut/ps/cut_det_tree3.ps for bounding box
+psfig: including cut/ps/cut_det_tree3.ps 
+[111]
+psfig: searching cut/ps/cut_det_tree4.ps for bounding box
+psfig: including cut/ps/cut_det_tree4.ps 
+[112]
+Overfull \hbox (1.33665pt too wide) in paragraph at lines 360--367
+\OT1/cmr/m/n/10.95 The sim-ple dis-tributed im-ple-men-ta-tion of the \OT1/cmr/
+m/it/10.95 cut \OT1/cmr/m/n/10.95 extra-logical re-la-tion would
+ []
+
+[113] [114]) [115] (functions/functions.tex
+Chapter 5.
+
+Overfull \hbox (5.8813pt too wide) in paragraph at lines 28--34
+[]\OT1/cmr/m/n/10.95 The higher-order func-tional sup-port in PrologPF is suf-f
+i-cient to al-low straight-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116
+
+
+
+]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 75.
+
+[117]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 121.
+ [118] [119] [120]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+[123] [124] [125]
+Overfull \hbox (26.12265pt too wide) in paragraph at lines 554--568
+[] 
+ []
+
+
+Underfull \vbox (badness 2065) has occurred while \output is active []
+
+ [126]
+[127]
+Overfull \hbox (34.99745pt too wide) in paragraph at lines 619--633
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--633
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--660
+
+ []
+
+[128]
+Underfull \hbox (badness 10000) in paragraph at lines 691--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--706
+
+ []
+
+[129]
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 751--755
+[] 
+ []
+
+[130] [131]
+Overfull \hbox (13.12173pt too wide) in paragraph at lines 863--868
+[]\OT1/cmr/m/n/10.95 In the ab-sence of common-expression elim-i-na-tion op-ti-
+mi-sa-tions in the PrologPF
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 869.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 869.
+[132]
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 905--905
+[]\OT1/cmtt/m/n/10.95 fun Function_name(Arg_pattern1, Arg_pattern2...) = Expres
+sion_1;[] 
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 905--905
+[]    \OT1/cmtt/m/n/10.95 Function_name(Arg_pattern3, Arg_pattern4...) = Expres
+sion_2...[] 
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 915--915
+[]            \OT1/cmtt/m/n/10.95 else (if (Var1 = Arg_pattern3, Var2 = Arg_pat
+tern4...)[] 
+ []
+
+[133] [134] [135] [136] [137]
+Overfull \hbox (7.95724pt too wide) in paragraph at lines 1136--1136
+[]\OT1/cmr/bx/n/10.95 A pro-posal for more gen-eral ex-cep-tion sup-port in Pro
+logPF 
+ []
+
+[138]
+Overfull \hbox (1.34943pt too wide) in paragraph at lines 1166--1168
+[]\OT1/cmtt/m/n/10.95 catch \OT1/cmr/m/n/10.95 calls the sub-goal given as its 
+first ar-gu-ment, namely \OT1/cmtt/m/n/10.95 throw(foo)\OT1/cmr/m/n/10.95 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1183
+
+ []
+
+[139]
+Overfull \hbox (13.63802pt too wide) in paragraph at lines 1217--1229
+[]\OT1/cmr/m/n/10.95 The meta-relation \OT1/cmtt/m/n/10.95 throw \OT1/cmr/m/n/1
+0.95 should be mapped to a sim-i-lar func-tion \OT1/cmtt/m/n/10.95 throw/1\OT1/
+cmr/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 1217--1229
+[] 
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 1229--1243
+[] 
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 1243--1250
+[] 
+ []
+
+[140] [141] [142]
+Overfull \hbox (7.61276pt too wide) in paragraph at lines 1415--1415
+[]\OT1/cmr/bx/n/14.4 Comparison of PrologPF with \OT1/cmtt/m/n/14.4 call/N, app
+ly/3 
+ []
+
+
+Underfull \vbox (badness 1895) has occurred while \output is active []
+
+ [143]
+Overfull \hbox (35.09587pt too wide) in paragraph at lines 1432--1474
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1432--1474
+
+ []
+
+
+Overfull \hbox (30.37093pt too wide) in paragraph at lines 1484--1517
+[][]
+ []
+
+[144]
+Overfull \hbox (22.1119pt too wide) in paragraph at lines 1536--1544
+\OT1/cmr/m/n/10.95 metic func-tions, e.g. [].
+ []
+
+[145]
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 1544--1552
+[] 
+ []
+
+
+Overfull \hbox (15.82683pt too wide) in paragraph at lines 1578--1587
+\OT1/cmtt/m/n/10.95 map(plus(1)) \OT1/cmr/m/n/10.95 in-cre-ments each mem-ber o
+f a list, while \OT1/cmtt/m/n/10.95 foldr(append,[])
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 1578--1587
+[] 
+ []
+
+[146]
+Overfull \hbox (11.47115pt too wide) in paragraph at lines 1622--1662
+[][]
+ []
+
+[147] [148] [149] [150]) [151] (case/case.tex
+Chapter 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [152
+
+
+
+]
+psfig: searching case/ps/ex4_1.ps for bounding box
+psfig: including case/ps/ex4_1.ps 
+psfig: searching case/ps/ex4_2.ps for bounding box
+psfig: including case/ps/ex4_2.ps 
+[153] [154]
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 130--130
+[]    \OT1/cmtt/m/n/10.95 allpairs([X|Xs],Ys) = append(pairx(X,Ys), allpairs(Xs
+,Ys)).[] 
+ []
+
+[155]
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 173--173
+[]        \OT1/cmtt/m/n/10.95 else addall( append( allpairs( startpoints(Pairs,
+X), [Y]),[] 
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 173--173
+[]                             \OT1/cmtt/m/n/10.95 allpairs( [X], endpoints(Y,P
+airs))),[] 
+ []
+
+[156]
+Overfull \hbox (0.43797pt too wide) in paragraph at lines 202--209
+\OT1/cmr/m/n/10.95 This ex-er-cise ex-ploits the higher-order pro-gram-ming ca-
+pa-bil-i-ties of PrologPF
+ []
+
+[157]
+Overfull \hbox (5.15182pt too wide) in paragraph at lines 247--250
+[]\OT1/cmr/m/n/10.95 An ad-di-tional util-ity func-tion com-mon in the use of l
+ists is \OT1/cmtt/m/n/10.95 nth\OT1/cmr/m/n/10.95 , with \OT1/cmtt/m/n/10.95 nt
+h(S,N)
+ []
+
+[158]
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 302--302
+[]      \OT1/cmtt/m/n/10.95 item(X, lambda([], primes(filters(notdiv(X), Xf @ [
+])))).[] 
+ []
+
+[159]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[160]
+psfig: searching case/ps/changlee2_L_23_runtime.ps for bounding box
+psfig: including case/ps/changlee2_L_23_runtime.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 420
+ []  
+ []
+
+[161]
+psfig: searching case/ps/pttp_overbeek_L_130_runtime.ps for bounding box
+psfig: including case/ps/pttp_overbeek_L_130_runtime.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 453
+ []  
+ []
+
+psfig: searching case/ps/pttp_overbeek_L_130_spdup.ps for bounding box
+psfig: including case/ps/pttp_overbeek_L_130_spdup.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 464
+ []  
+ []
+
+psfig: searching case/ps/super_linear.ps for bounding box
+psfig: including case/ps/super_linear.ps 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [162]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [163]
+[164] [165]) [166] (kappa/kappa.tex
+Chapter 7.
+[167
+
+
+
+]
+psfig: searching kappa/ps/kappa_bfp.ps for bounding box
+psfig: including kappa/ps/kappa_bfp.ps 
+[168] [169]
+psfig: searching kappa/ps/port_tree.ps for bounding box
+psfig: including kappa/ps/port_tree.ps 
+[170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171]
+[172]
+psfig: searching kappa/ps/horiz_ports.ps for bounding box
+psfig: including kappa/ps/horiz_ports.ps 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [173]
+psfig: searching kappa/ps/sloping_ports.ps for bounding box
+psfig: including kappa/ps/sloping_ports.ps 
+[174] [175]
+Underfull \hbox (badness 10000) in paragraph at lines 379--382
+
+ []
+
+[176]
+Overfull \hbox (2.90047pt too wide) in paragraph at lines 395--404
+\OT1/cmr/m/n/10.95 PrologPF with oracle-based breadth-first par-ti-tion-ing pro
+-ceeds in two phases,
+ []
+
+psfig: searching kappa/ps/pent_orc_count.ps for bounding box
+psfig: including kappa/ps/pent_orc_count.ps 
+psfig: searching kappa/ps/pent_orc_storage.ps for bounding box
+psfig: including kappa/ps/pent_orc_storage.ps 
+
+Underfull \vbox (badness 2181) has occurred while \output is active []
+
+ [177]
+[178]
+psfig: searching kappa/ps/pent_bf_times.ps for bounding box
+psfig: including kappa/ps/pent_bf_times.ps 
+[179] [180]
+psfig: searching kappa/ps/repeat_kappa.ps for bounding box
+psfig: including kappa/ps/repeat_kappa.ps 
+[181] [182] [183]) [184] (sok/sok.tex
+Chapter 8.
+[185
+
+
+
+] [186]
+psfig: searching sok/ps/splitting.ps for bounding box
+psfig: including sok/ps/splitting.ps 
+[187]
+psfig: searching sok/ps/busy_pp.ps for bounding box
+psfig: including sok/ps/busy_pp.ps 
+[188] [189]
+psfig: searching sok/ps/idle_pp.ps for bounding box
+psfig: including sok/ps/idle_pp.ps 
+
+Overfull \hbox (17.83583pt too wide) detected at line 188
+ []  
+ []
+
+[190] [191]
+psfig: searching sok/ps/zones.ps for bounding box
+psfig: including sok/ps/zones.ps 
+[192] [193]
+psfig: searching sok/ps/spd_compare_fixed.ps for bounding box
+psfig: including sok/ps/spd_compare_fixed.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 340
+ []  
+ []
+
+[194]
+psfig: searching sok/ps/spd_compare_doubling.ps for bounding box
+psfig: including sok/ps/spd_compare_doubling.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 390
+ []  
+ []
+
+
+Underfull \vbox (badness 3668) has occurred while \output is active []
+
+ [195]
+psfig: searching sok/ps/spd_compare_fullorcs.ps for bounding box
+psfig: including sok/ps/spd_compare_fullorcs.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 428
+ []  
+ []
+
+[196]
+psfig: searching sok/ps/pent_G_1_30.ps for bounding box
+psfig: including sok/ps/pent_G_1_30.ps 
+
+Overfull \hbox (3.78333pt too wide) detected at line 444
+ []  
+ []
+
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+ [197]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [198]
+Overfull \hbox (6.1124pt too wide) in paragraph at lines 514--519
+[]\OT1/cmr/bx/n/10.95 Small poi-soned or-a-cles: \OT1/cmr/m/n/10.95 fun-da-men-
+tal to the use of \OT1/cmtt/m/n/10.95 kappa \OT1/cmr/m/n/10.95 for breadth-
+ []
+
+[199]
+Overfull \hbox (5.04057pt too wide) in paragraph at lines 540--546
+[]\OT1/cmr/bx/n/10.95 Control pro-ces-sor re-quire-ments: \OT1/cmr/m/n/10.95 th
+e SOK strat-egy de-scribed above
+ []
+
+) [200] (conclusions/conclusions.tex
+Chapter 9.
+
+Underfull \vbox (badness 2478) has occurred while \output is active []
+
+ [201
+
+
+
+]
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [202]
+Overfull \hbox (3.41881pt too wide) in paragraph at lines 110--119
+[]\OT1/cmr/m/n/10.95 For the sim-ple one-time breadth-first par-ti-tion-ing sch
+edul-ing al-go-rithm tested
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [203])
+[204] (system/system.tex
+Appendix A.
+psfig: searching system/ps/system_diag.ps for bounding box
+psfig: including system/ps/system_diag.ps 
+[205
+
+
+
+] [206] [207] [208]
+psfig: searching system/ps/skynet_half_grey.ps for bounding box
+psfig: including system/ps/skynet_half_grey.ps 
+
+Overfull \hbox (1.46152pt too wide) in paragraph at lines 181--186
+\OT1/cmr/m/n/10.95 tributed ex-e-cu-tion of the user pro-gram pro-gresses. In p
+ar-tic-u-lar, the \OT1/cmtt/m/n/10.95 running
+ []
+
+[209] [210]) [211] (benchmarks/benchmarks.tex
+Appendix B.
+psfig: searching benchmarks/ps/q8_tree.ps for bounding box
+psfig: including benchmarks/ps/q8_tree.ps 
+psfig: searching benchmarks/ps/q10_tree.ps for bounding box
+psfig: including benchmarks/ps/q10_tree.ps 
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 45--45
+[]\OT1/cmtt/m/n/10.95 get_solutions(Board_size, Soln) :- solve(Board_size, [], 
+Soln).[] 
+ []
+
+[212
+
+
+
+] [213]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 89--89
+[]\OT1/cmtt/m/n/10.95 o_query :- get_solutions(8,X), o_ksoln(X).  % or 10 for 1
+0-queens[] 
+ []
+
+psfig: searching benchmarks/ps/pent_tree.ps for bounding box
+psfig: including benchmarks/ps/pent_tree.ps 
+[214]
+Underfull \vbox (badness 4543) has occurred while \output is active []
+
+ [215]
+[216] [217]
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10.95 pent(7,2,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np
+,np]).[] 
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10.95 pent(7,4,[np,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm
+,np]).[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10.95 pent(11,2,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,np,dnm,dnm,dn
+m,np]).[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 263--263
+[]\OT1/cmtt/m/n/10.95 pent(11,3,[np,dnm,dnm,dnm,np,np,dnm,dnm,dnm,np,dnm,dnm,dn
+m,np]).[] 
+ []
+
+[218]
+psfig: searching benchmarks/ps/cl2_tree.ps for bounding box
+psfig: including benchmarks/ps/cl2_tree.ps 
+psfig: searching benchmarks/ps/over_tree.ps for bounding box
+psfig: including benchmarks/ps/over_tree.ps 
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [219]
+[220] (kappa_macro/kappa_macro.tex
+Appendix C.
+[221
+
+
+
+]
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 #define MAXORC  10000     /* maximum length of oracle    
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int defer = 0;     /* flag to defer interrupt hand
+ling    */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int skip = 0;      /* flag to skip prev port on in
+terrupt */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc[MAXORC];   /* array to hold orc as it is b
+uilt    */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int b_depth;       /* current BUILD or-depth      
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_l0;        /* depth limit L0              
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_l;         /* depth limit L               
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_g;         /* group count G               
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_n;         /* unique processor number N   
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_s;         /* count of ports S            
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 static int orc_length;    /* length of oracle to follow  
+        */[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]      \OT1/cmtt/m/n/10.95 index = UnTag_INT(word);  /* index := argument to o
+_kbuild */[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 84--84
+[]      \OT1/cmtt/m/n/10.95 if (b_depth <= orc_l0) { if (index != orc[b_depth])
+ fail;}[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]             \OT1/cmtt/m/n/10.95 if (b_depth == orc_l) /* if at partitioning 
+depth...*/[] 
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 84--84
+[]                 \OT1/cmtt/m/n/10.95 if (defer) { defer = 0; send_oracle(); f
+ail; }[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 #define o_kbuild2     /* called on backtracking through o
+_kbuild */[] 
+ []
+
+[222]) [223] (references/references.tex (main.bbl [224
+
+
+
+] [225] [226] [227]
+Underfull \hbox (badness 2189) in paragraph at lines 306--310
+[]\OT1/cmr/m/sc/10.95 Maluszy[]nski, J., Bon-nier, S., Boye, J., Klu[]zniak, F.
+,
+ []
+
+[228])) [229] (main.aux (title/title.aux) (intro/intro.aux)
+(background/background.aux) (bfp_depth/bfp_depth.aux) (cut/cut.aux)
+(functions/functions.aux) (case/case.aux) (kappa/kappa.aux) (sok/sok.aux)
+(conclusions/conclusions.aux) (system/system.aux) (benchmarks/benchmarks.aux)
+(kappa_macro/kappa_macro.aux) (references/references.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2518 strings out of 10947
+ 25352 string characters out of 73400
+ 72703 words of memory out of 262141
+ 4043 multiletter control sequences out of 9500
+ 18230 words of font info for 68 fonts, out of 100000 for 255
+ 15 hyphenation exceptions out of 607
+ 32i,10n,23p,259b,458s stack positions out of 300i,100n,60p,3000b,4000s
+
+Output written on main.dvi (243 pages, 620104 bytes).
