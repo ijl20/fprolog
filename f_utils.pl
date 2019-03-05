@@ -3,6 +3,7 @@
 /* f_utils: utility relations for function processing                      */
 /***************************************************************************/
 
+% 2019-03-05 syntax fixes for swipl
 % 2018-07-25 syntax fixes for gprolog
 % 1997-06-05 original file from ijl20 PhD - designed to work with wamcc Prolog  compiler
 
