@@ -56,7 +56,7 @@ read_fprolog_file(Filename,Prog) :- open(Filename,read,Stream),
 read_fprolog_stream(Stream,[X|L]) :- read(Stream,X), 
                                      ( /* if */ at_end_of_stream(Stream) -> 
                                        /* then */ L = [] ; 
-                                       /* else */ read_fprolog_prog(Stream,L)
+                                       /* else */ read_fprolog_stream(Stream,L)
                                      ).
 
 % Utility relation, assert all clauses of an fprolog program, in order.
