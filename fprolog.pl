@@ -531,6 +531,16 @@ goals_to_fcode((P,Q),(P1,Q1)) :-
     goals_to_fcode(Q,Q1),
     !.
 
+goals_to_fcode((P;Q),(P1;Q1)) :-
+    goals_to_fcode(P,P1),
+    goals_to_fcode(Q,Q1),
+    !.
+
+goals_to_fcode((P->Q),(P1->Q1)) :-
+    goals_to_fcode(P,P1),
+    goals_to_fcode(Q,Q1),
+    !.
+
 goals_to_fcode(P,P_code) :-
     flatten_pred(P,Arg_code,P1),
     append(Arg_code, [P1], P_code_list),
