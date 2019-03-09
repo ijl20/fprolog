@@ -2,7 +2,7 @@
 %
 % Fit pentominoes into a board
 %
-% Board is 4 x 20, represented as a single list of atoms no_piece | piece | border
+% Board is 3 x 20, represented as a single list of atoms no_piece | piece | border
 %
 % Each pentomino (Piece) has a number 1..12. Pieces is an integer list.
 %
@@ -16,7 +16,7 @@
 % where:
 %     Board is the current state of the Board as list no_piece | piece | border
 %     Pieces is the integer list of remaining pieces
-%     History is the 
+%     History is the list of pieces and their orientation 
 solution(H) :-
 	initial_state(Si),
 	can_reach(Si,Sf),
@@ -86,65 +86,202 @@ match([border|Tb],[dnm|Tp],[border|Tnb]) :-
 	match(Tb,Tp,Tnb).
 
 % pent(Piece, Orientation, Pattern)
-pent(1,1,[ np, np, np,dnm, np,dnm, np]).
-pent(1,2,[ np, op, np,dnm, np, np, np]).
-pent(1,3,[ np, np,dnm,dnm, np,dnm,dnm,dnm, np, np]).
-pent(1,4,[ np, np,dnm,dnm,dnm, np,dnm,dnm, np, np]).
-
-pent(2,1,[np,op,dnm,np,np,np,dnm,dnm,np]).
-
-pent(3,1,[np,np,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
-pent(3,2,[np,np,np,dnm,np,dnm,dnm,dnm,np]).
-pent(3,3,[np,dnm,op,op,np,dnm,np,np,np]).
-pent(3,4,[np,op,op,dnm,np,op,op,dnm,np,np,np]).
-
-pent(4,1,[np,op,dnm,op,np,op,dnm,np,np,np]).
-pent(4,2,[np,op,op,dnm,np,np,np,dnm,np]).
-pent(4,3,[np,dnm,np,np,np,dnm,dnm,dnm,np]).
-pent(4,4,[np,np,np,dnm,dnm,np,dnm,dnm,dnm,np]).
-
-pent(5,1,[np,np,dnm,np,np,np]).
-pent(5,2,[np,np,dnm,dnm,np,np,dnm,dnm,np]).
-pent(5,3,[np,np,op,dnm,np,np,np]).
-pent(5,4,[np,np,dnm,dnm,np,np,dnm,dnm,dnm,np]).
-pent(5,5,[np,np,np,dnm,np,np]).
-pent(5,6,[np,np,np,dnm,dnm,np,np]).
-pent(5,7,[np,dnm,dnm,dnm,np,np,dnm,dnm,np,np]).
-pent(5,8,[np,dnm,dnm,np,np,dnm,dnm,np,np]).
-
-pent(6,1,[np,dnm,op,np,np,dnm,np,np]).
-pent(6,2,[np,op,op,dnm,np,np,op,dnm,dnm,np,np]).
-pent(6,3,[np,np,op,dnm,dnm,np,np,dnm,dnm,dnm,np]).
-pent(6,4,[np,np,dnm,np,np,dnm,dnm,np]).
-
-pent(7,1,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,np,np]).
-pent(7,2,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,np]).
-pent(7,3,[np,np,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
-pent(7,4,[np,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
-
-pent(8,1,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,np,dnm,dnm,np]).
-pent(8,2,[np,dnm,dnm,dnm,np,np,dnm,dnm,np,dnm,dnm,dnm,np]).
-pent(8,3,[np,dnm,dnm,dnm,np,dnm,dnm,np,np,dnm,dnm,dnm,np]).
-pent(8,4,[np,dnm,dnm,np,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
-
-pent(9,1,[np,np,op,dnm,dnm,np,np,dnm,dnm,np]).
-pent(9,2,[np,dnm,np,np,np,dnm,dnm,np]).
-pent(9,3,[np,op,op,dnm,np,np,np,dnm,dnm,np]).
-pent(9,4,[np,np,dnm,np,np,dnm,dnm,dnm,np]).
-pent(9,5,[np,op,dnm,np,np,op,dnm,dnm,np,np]).
-pent(9,6,[np,op,dnm,op,np,np,dnm,np,np]).
-pent(9,7,[np,op,dnm,np,np,np,dnm,dnm,dnm,np]).
-pent(9,8,[np,op,dnm,np,np,np,dnm,np]).
-
-pent(10,1,[np,np,dnm,op,np,dnm,dnm,np,np]).
-pent(10,2,[np,np,op,dnm,dnm,np,op,dnm,dnm,np,np]).
-pent(10,3,[np,op,op,dnm,np,np,np,dnm,dnm,dnm,np]).
-pent(10,4,[np,dnm,np,np,np,dnm,np]).
-
-pent(11,1,[np,dnm,dnm,dnm,np,dnm,dnm,np,np,dnm,dnm,np]).
-pent(11,2,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,np,dnm,dnm,dnm,np]).
-pent(11,3,[np,dnm,dnm,dnm,np,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
-pent(11,4,[np,dnm,dnm,np,np,dnm,dnm,np,dnm,dnm,dnm,np]).
-
-pent(12,1,[np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np,dnm,dnm,dnm,np]).
+%
+% X X X 
+% X   X
+pent(1,1,[ np, np, np,dnm, 
+           np,dnm, np]).
+pent(1,2,[ np, op, np,dnm,
+           np, np, np]).
+pent(1,3,[ np, np,dnm,dnm,
+           np,dnm,dnm,dnm, 
+	   np, np]).
+pent(1,4,[ np, np,dnm,dnm,
+           dnm,np,dnm,dnm,
+	   np, np]).
+%   X
+% X X X
+%   X
+pent(2,1,[     np, op,dnm,
+           np, np, np,dnm,
+	  dnm, np]).
+% X X X
+%     X
+%     X
+pent(3,1,[ np, np, np,dnm,
+          dnm,dnm, np,dnm,
+	  dnm,dnm, np]).
+pent(3,2,[np, np, np,dnm,
+          np,dnm,dnm,dnm,
+	  np]).
+pent(3,3,[        np,dnm,
+          op, op, np,dnm,
+	  np, np, np]).
+pent(3,4,[np, op, op,dnm,
+          np, op, op,dnm,
+	  np, np, np]).
+%   X
+%   X
+% X X X
+pent(4,1,[     np, op,dnm,
+           op, np, op,dnm,
+	   np, np, np]).
+pent(4,2,[ np, op, op,dnm,
+           np, np, np,dnm,
+	   np]).
+pent(4,3,[         np,dnm,
+           np, np, np,dnm,
+	   dnm,dnm,np]).
+pent(4,4,[ np, np, np,dnm,
+          dnm, np,dnm,dnm,
+	  dnm, np]).
+%   X X
+% X X X
+pent(5,1,[     np, np,dnm,
+           np, np, np]).
+pent(5,2,[     np, np,dnm,
+           dnm,np, np,dnm,
+	   dnm,np]).
+pent(5,3,[ np, np, op,dnm,
+           np, np, np]).
+pent(5,4,[ np, np,dnm,dnm,
+           np, np,dnm,dnm,
+	   dnm,np]).
+pent(5,5,[ np, np, np,dnm,
+           np, np]).
+pent(5,6,[ np, np, np,dnm,
+          dnm, np, np]).
+pent(5,7,[     np,dnm,dnm,
+          dnm, np, np,dnm,
+	  dnm,np,np]).
+pent(5,8,[     np,dnm,dnm,
+           np, np,dnm,dnm,
+	   np, np]).
+%     X
+%   X X
+% X X
+pent(6,1,[         np,dnm,
+           op, np, np,dnm,
+	   np, np]).
+pent(6,2,[ np, op, op,dnm,
+           np, np, op,dnm,
+	  dnm, np, np]).
+pent(6,3,[ np, np, op,dnm,
+          dnm, np, np,dnm,
+	  dnm,dnm, np]).
+pent(6,4,[     np, np,dnm,
+           np, np,dnm,dnm,
+	   np]).
+%   X
+%   X
+%   X
+% X X  
+pent(7,1,[     np,dnm,dnm,
+          dnm, np,dnm,dnm,
+	  dnm, np,dnm,dnm,
+	   np, np]).
+pent(7,2,[ np,dnm,dnm,dnm,
+           np,dnm,dnm,dnm,
+	   np,dnm,dnm,dnm,
+	   np, np]).
+pent(7,3,[ np, np,dnm,dnm,
+           np,dnm,dnm,dnm,
+	   np,dnm,dnm,dnm,
+	   np]).
+pent(7,4,[ np, np,dnm,dnm,
+          dnm, np,dnm,dnm,
+	  dnm, np,dnm,dnm,
+	  dnm, np]).
+% X
+% X
+% X X
+% X
+pent(8,1,[ np,dnm,dnm,dnm,
+           np,dnm,dnm,dnm,
+	   np, np,dnm,dnm,
+	   np]).
+pent(8,2,[ np,dnm,dnm,dnm,
+           np, np,dnm,dnm,
+	   np,dnm,dnm,dnm,
+	   np]).
+pent(8,3,[         np,dnm,
+          dnm,dnm, np,dnm,
+	  dnm, np, np,dnm,
+	  dnm,dnm, np]).
+pent(8,4,[     np,dnm,dnm,
+           np, np,dnm,dnm,
+	  dnm, np,dnm,dnm,
+	  dnm, np]).
+% X X
+%   X X
+%   X
+pent(9,1,[ np, np, op,dnm,
+          dnm, np, np,dnm,
+	  dnm, np]).
+pent(9,2,[         np,dnm,
+           np, np, np,dnm,
+	  dnm, np]).
+pent(9,3,[ np, op, op,dnm,
+           np, np, np,dnm,
+	  dnm, np]).
+pent(9,4,[     np, np,dnm,
+           np, np,dnm,dnm,
+	  dnm, np]).
+pent(9,5,[     np, op,dnm,
+           np, np, op,dnm,
+	  dnm, np, np]).
+pent(9,6,[     np, op,dnm,
+           op, np, np,dnm,
+	   np, np]).
+pent(9,7,[     np, op,dnm,
+           np, np, np,dnm,
+	   dnm,dnm,np]).
+pent(9,8,[     np, op,dnm,
+           np, np, np,dnm,
+	   np]).
+%   X X
+%   X
+% X X
+pent(10,1,[     np, np,dnm,
+            op, np,dnm,dnm,
+	    np, np]).
+pent(10,2,[ np, np, op,dnm,
+           dnm, np, op,dnm,
+	   dnm, np, np]).
+pent(10,3,[ np, op, op,dnm,
+            np, np, np,dnm,
+	    dnm,dnm,np]).
+pent(10,4,[         np,dnm,
+            np, np, np,dnm,
+	    np]).
+%     X
+%     X
+%   X X
+%   X
+pent(11,1,[         np,dnm,
+           dnm,dnm, np,dnm,
+	   dnm, np, np,dnm,
+	   dnm, np]).
+pent(11,2,[     np,dnm,dnm,
+           dnm, np,dnm,dnm,
+	   dnm, np, np,dnm,
+	   dnm,dnm, np]).
+pent(11,3,[     np,dnm,dnm,
+           dnm, np, np,dnm,
+	   dnm,dnm, np,dnm,
+	   dnm,dnm, np]).
+pent(11,4,[     np,dnm,dnm,
+            np, np,dnm,dnm,
+	    np,dnm,dnm,dnm,
+	    np]).
+% X
+% X
+% X
+% X
+% X
+pent(12,1,[ np,dnm,dnm,dnm,
+            np,dnm,dnm,dnm,
+	    np,dnm,dnm,dnm,
+	    np,dnm,dnm,dnm,
+	    np]).
 
