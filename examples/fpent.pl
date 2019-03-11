@@ -2,6 +2,18 @@
 %
 % Fit pentominoes into a board
 %
+%  X X    X    X      X X X  X    X X    X    X    X X    X X    X    X
+%  X    X X X  X        X    X X    X X  X    X      X X    X    X    X
+%  X X    X    X X X    X    X X      X  X    X X    X      X X  X X  X
+%                                        X X  X                    X  X
+%                                                                     X
+%
+%  C C    X    L      T T T  6    M M    l    t      f f  Z Z    S    I
+%  C    X X X  L        T    6 6    M M  l    t t  f f      Z    S    I
+%  C C    X    L L L    T    6 6      M  l    t      f      Z Z  S S  I
+%                                        l l  t                    S  I
+%                                                                     I
+%
 % Board is 3 x 20, represented as a single list of atoms no_piece | piece | border
 %
 % Each pentomino (Piece) has a number 1..12. Pieces is an integer list.
@@ -23,7 +35,8 @@ solution(H) :-
     final_state(Sf),
     Sf = state(_,_,H).
 
-initial_state(state(Board,[1,2,3,4,5,6,7,8,9,10,11,12],[])) :-
+initial_state(state(Board,Pieces,[])) :-
+    setof(P,A^B^pent(P,A,B),Pieces),
     gen_board(20,Board).
 
 % gen_board(N, Board) will generate a board of size 4 x N
@@ -103,199 +116,200 @@ match([border|Tb],[dnm|Tp],[border|Tnb]) :-
 %
 % X X X 
 % X   X
-pent(1,1,[ np, np, np,dnm, 
-           np,dnm, np]).
-pent(1,2,[ np, op, np,dnm,
+pent('C',1,[ np, np, np,dnm, 
+             np,dnm, np]).
+pent('C',2,[ np, op, np,dnm,
+             np, np, np]).
+pent('C',3,[ np, np,dnm,dnm,
+             np,dnm,dnm,dnm, 
+             np, np]).
+pent('C',4,[ np, np,dnm,dnm,
+            dnm, np,dnm,dnm,
+             np, np]).
+%   X
+% X X X
+%   X
+pent('X',1,[     np, op,dnm,
+             np, np, np,dnm,
+            dnm, np]).
+% X 
+% X  
+% X X X
+pent('L',1,[ np, np, np,dnm,
+           dnm,dnm, np,dnm,
+           dnm,dnm, np]).
+pent('L',2,[ np, np, np,dnm,
+             np,dnm,dnm,dnm,
+             np]).
+pent('L',3,[         np,dnm,
+             op, op, np,dnm,
+             np, np, np]).
+pent('L',4,[ np, op, op,dnm,
+             np, op, op,dnm,
+             np, np, np]).
+% X X X
+%   X
+%  X 
+pent('T',1,[     np, op,dnm,
+             op, np, op,dnm,
+             np, np, np]).
+pent('T',2,[ np, op, op,dnm,
+             np, np, np,dnm,
+             np]).
+pent('T',3,[         np,dnm,
+             np, np, np,dnm,
+             dnm,dnm,np]).
+pent('T',4,[ np, np, np,dnm,
+            dnm, np,dnm,dnm,
+            dnm, np]).
+% 6
+% 6 6 
+% 6 6
+pent(6,1,[     np, np,dnm,
            np, np, np]).
-pent(1,3,[ np, np,dnm,dnm,
-           np,dnm,dnm,dnm, 
-           np, np]).
-pent(1,4,[ np, np,dnm,dnm,
-           dnm,np,dnm,dnm,
-           np, np]).
-%   X
-% X X X
-%   X
-pent(2,1,[     np, op,dnm,
-           np, np, np,dnm,
-          dnm, np]).
-% X X X
-%     X
-%     X
-pent(3,1,[ np, np, np,dnm,
-          dnm,dnm, np,dnm,
-          dnm,dnm, np]).
-pent(3,2,[np, np, np,dnm,
-          np,dnm,dnm,dnm,
-          np]).
-pent(3,3,[        np,dnm,
-          op, op, np,dnm,
-          np, np, np]).
-pent(3,4,[np, op, op,dnm,
-          np, op, op,dnm,
-          np, np, np]).
-%   X
-%   X
-% X X X
-pent(4,1,[     np, op,dnm,
-           op, np, op,dnm,
-           np, np, np]).
-pent(4,2,[ np, op, op,dnm,
-           np, np, np,dnm,
-           np]).
-pent(4,3,[         np,dnm,
-           np, np, np,dnm,
-           dnm,dnm,np]).
-pent(4,4,[ np, np, np,dnm,
-          dnm, np,dnm,dnm,
-          dnm, np]).
-%   X X
-% X X X
-pent(5,1,[     np, np,dnm,
-           np, np, np]).
-pent(5,2,[     np, np,dnm,
+pent(6,2,[     np, np,dnm,
            dnm,np, np,dnm,
            dnm,np]).
-pent(5,3,[ np, np, op,dnm,
+pent(6,3,[ np, np, op,dnm,
            np, np, np]).
-pent(5,4,[ np, np,dnm,dnm,
+pent(6,4,[ np, np,dnm,dnm,
            np, np,dnm,dnm,
           dnm, np]).
-pent(5,5,[ np, np, np,dnm,
+pent(6,5,[ np, np, np,dnm,
            np, np]).
-pent(5,6,[ np, np, np,dnm,
+pent(6,6,[ np, np, np,dnm,
           dnm, np, np]).
-pent(5,7,[     np,dnm,dnm,
+pent(6,7,[     np,dnm,dnm,
           dnm, np, np,dnm,
           dnm, np, np]).
-pent(5,8,[     np,dnm,dnm,
+pent(6,8,[     np,dnm,dnm,
            np, np,dnm,dnm,
            np, np]).
 %     X
 %   X X
 % X X
-pent(6,1,[         np,dnm,
-           op, np, np,dnm,
-           np, np]).
-pent(6,2,[ np, op, op,dnm,
-           np, np, op,dnm,
-          dnm, np, np]).
-pent(6,3,[ np, np, op,dnm,
-          dnm, np, np,dnm,
-          dnm,dnm, np]).
-pent(6,4,[     np, np,dnm,
-           np, np,dnm,dnm,
-           np]).
-%   X
-%   X
-%   X
+pent('M',1,[         np,dnm,
+             op, np, np,dnm,
+             np, np]).
+pent('M',2,[ np, op, op,dnm,
+             np, np, op,dnm,
+            dnm, np, np]).
+pent('M',3,[ np, np, op,dnm,
+            dnm, np, np,dnm,
+            dnm,dnm, np]).
+pent('M',4,[     np, np,dnm,
+             np, np,dnm,dnm,
+             np]).
+% X
+% X
+% X
 % X X  
-pent(7,1,[     np,dnm,dnm,
+pent(l,1,[     np,dnm,dnm,
           dnm, np,dnm,dnm,
           dnm, np,dnm,dnm,
            np, np]).
-pent(7,2,[ np,dnm,dnm,dnm,
+pent(l,2,[ np,dnm,dnm,dnm,
            np,dnm,dnm,dnm,
            np,dnm,dnm,dnm,
            np, np]).
-pent(7,3,[ np, np,dnm,dnm,
+pent(l,3,[ np, np,dnm,dnm,
            np,dnm,dnm,dnm,
            np,dnm,dnm,dnm,
            np]).
-pent(7,4,[ np, np,dnm,dnm,
+pent(l,4,[ np, np,dnm,dnm,
           dnm, np,dnm,dnm,
           dnm, np,dnm,dnm,
           dnm, np]).
 % X
-% X
 % X X
 % X
-pent(8,1,[ np,dnm,dnm,dnm,
+% X
+pent(t,1,[ np,dnm,dnm,dnm,
            np,dnm,dnm,dnm,
            np, np,dnm,dnm,
            np]).
-pent(8,2,[ np,dnm,dnm,dnm,
+pent(t,2,[ np,dnm,dnm,dnm,
            np, np,dnm,dnm,
            np,dnm,dnm,dnm,
            np]).
-pent(8,3,[         np,dnm,
+pent(t,3,[         np,dnm,
           dnm,dnm, np,dnm,
           dnm, np, np,dnm,
           dnm,dnm, np]).
-pent(8,4,[     np,dnm,dnm,
+pent(t,4,[     np,dnm,dnm,
            np, np,dnm,dnm,
           dnm, np,dnm,dnm,
           dnm, np]).
-% X X
 %   X X
+% X X
 %   X
-pent(9,1,[ np, np, op,dnm,
+pent(f,1,[ np, np, op,dnm,
           dnm, np, np,dnm,
           dnm, np]).
-pent(9,2,[         np,dnm,
+pent(f,2,[         np,dnm,
            np, np, np,dnm,
           dnm, np]).
-pent(9,3,[ np, op, op,dnm,
+pent(f,3,[ np, op, op,dnm,
            np, np, np,dnm,
           dnm, np]).
-pent(9,4,[     np, np,dnm,
+pent(f,4,[     np, np,dnm,
            np, np,dnm,dnm,
           dnm, np]).
-pent(9,5,[     np, op,dnm,
+pent(f,5,[     np, op,dnm,
            np, np, op,dnm,
           dnm, np, np]).
-pent(9,6,[     np, op,dnm,
+pent(f,6,[     np, op,dnm,
            op, np, np,dnm,
            np, np]).
-pent(9,7,[     np, op,dnm,
+pent(f,7,[     np, op,dnm,
            np, np, np,dnm,
           dnm,dnm, np]).
-pent(9,8,[     np, op,dnm,
+pent(f,8,[     np, op,dnm,
            np, np, np,dnm,
            np]).
-%   X X
-%   X
 % X X
-pent(10,1,[     np, np,dnm,
-            op, np,dnm,dnm,
-            np, np]).
-pent(10,2,[ np, np, op,dnm,
-           dnm, np, op,dnm,
-           dnm, np, np]).
-pent(10,3,[ np, op, op,dnm,
-            np, np, np,dnm,
-           dnm,dnm, np]).
-pent(10,4,[         np,dnm,
-            np, np, np,dnm,
-            np]).
-%     X
-%     X
-%   X X
 %   X
-pent(11,1,[         np,dnm,
-           dnm,dnm, np,dnm,
-           dnm, np, np,dnm,
-           dnm, np]).
-pent(11,2,[     np,dnm,dnm,
-           dnm, np,dnm,dnm,
-           dnm, np, np,dnm,
-           dnm,dnm, np]).
-pent(11,3,[     np,dnm,dnm,
-           dnm, np, np,dnm,
-           dnm,dnm, np,dnm,
-           dnm,dnm, np]).
-pent(11,4,[     np,dnm,dnm,
-            np, np,dnm,dnm,
-            np,dnm,dnm,dnm,
-            np]).
+%   X X
+pent('Z',1,[     np, np,dnm,
+             op, np,dnm,dnm,
+             np, np]).
+pent('Z',2,[ np, np, op,dnm,
+            dnm, np, op,dnm,
+            dnm, np, np]).
+pent('Z',3,[ np, op, op,dnm,
+             np, np, np,dnm,
+            dnm,dnm, np]).
+pent('Z',4,[         np,dnm,
+             np, np, np,dnm,
+             np]).
+% X
+% X
+% X X
+%   X
+pent('S',1,[         np,dnm,
+            dnm,dnm, np,dnm,
+            dnm, np, np,dnm,
+            dnm, np]).
+pent('S',2,[     np,dnm,dnm,
+            dnm, np,dnm,dnm,
+            dnm, np, np,dnm,
+            dnm,dnm, np]).
+pent('S',3,[     np,dnm,dnm,
+            dnm, np, np,dnm,
+            dnm,dnm, np,dnm,
+            dnm,dnm, np]).
+pent('S',4,[     np,dnm,dnm,
+             np, np,dnm,dnm,
+             np,dnm,dnm,dnm,
+             np]).
 % X
 % X
 % X
 % X
 % X
-pent(12,1,[ np,dnm,dnm,dnm,
-            np,dnm,dnm,dnm,
-            np,dnm,dnm,dnm,
-            np,dnm,dnm,dnm,
-            np]).
+pent('I',1,[ np,dnm,dnm,dnm,
+             np,dnm,dnm,dnm,
+             np,dnm,dnm,dnm,
+             np,dnm,dnm,dnm,
+             np]).
 
