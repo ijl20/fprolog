@@ -79,7 +79,7 @@ play_pent(Board,Pattern,New_Board) :-
 % removed. I.e. New_board always starts with 'no_piece'.
 trim([],[]).
 trim([border|T],Board) :- trim(T,Board).
-trim([piece|T],Board) :- trim(T,Board).
+trim([p|T],Board) :- trim(T,Board).
 trim([np|Board],[np|Board]).
 
 % match(Board, Pattern, New_board) succeeds if Pattern
@@ -90,28 +90,24 @@ trim([np|Board],[np|Board]).
 match(Board,[],Board).
 % match succeeds if Board piece matches pattern 'dnm' | 'op'
 % and rest of Board matches rest of Pattern
-match([piece|Tb],[dnm|Tp],[piece|Tnb]) :-
-    match(Tb,Tp,Tnb).
-match([piece|Tb],[op|Tp],[piece|Tnb]) :-
-    match(Tb,Tp,Tnb).
+match([p|Tb],[dnm|Tp],[p|Tnb]) :- match(Tb,Tp,Tnb).
+match([p|Tb],[p|Tp],[p|Tnb]) :- match(Tb,Tp,Tnb).
 % match succeeds if Board no_piece matches pattern 'dnm' | 'np'
 % and rest of Board matches rest of Pattern
-match([np|Tb],[np|Tp],[piece|Tnb]) :-
-    match(Tb,Tp,Tnb).
-match([np|Tb],[dnm|Tp],[np|Tnb]) :-
-    match(Tb,Tp,Tnb).
+match([np|Tb],[np|Tp],[p|Tnb]) :- match(Tb,Tp,Tnb).
+match([np|Tb],[dnm|Tp],[np|Tnb]) :- match(Tb,Tp,Tnb).
 % match succeeds if Board border matches pattern 'dnm'
 % and rest of Board matches rest of Pattern
-match([border|Tb],[dnm|Tp],[border|Tnb]) :-
-    match(Tb,Tp,Tnb).
+match([border|Tb],[dnm|Tp],[border|Tnb]) :- match(Tb,Tp,Tnb).
 
 % pent(Piece, Orientation, Pattern)
 %
-% X X X 
-% X   X
+% X X
+% X  
+% X X
 pent('C',1,[ np, np, np,dnm, 
              np,dnm, np]).
-pent('C',2,[ np, op, np,dnm,
+pent('C',2,[ np,  p, np,dnm,
              np, np, np]).
 pent('C',3,[ np, np,dnm,dnm,
              np,dnm,dnm,dnm, 
@@ -129,32 +125,32 @@ pent('L',2,[ np, np, np,dnm,
              np,dnm,dnm,dnm,
              np]).
 pent('L',3,[         np,dnm,
-             op, op, np,dnm,
+              p,  p, np,dnm,
              np, np, np]).
-pent('L',4,[ np, op, op,dnm,
-             np, op, op,dnm,
+pent('L',4,[ np,  p,  p,dnm,
+             np,  p,  p,dnm,
              np, np, np]).
-% 6
-% 6 6 
-% 6 6
-pent(6,1,[     np, np,dnm,
-           np, np, np]).
-pent(6,2,[     np, np,dnm,
-           dnm,np, np,dnm,
-           dnm,np]).
-pent(6,3,[ np, np, op,dnm,
-           np, np, np]).
-pent(6,4,[ np, np,dnm,dnm,
-           np, np,dnm,dnm,
-          dnm, np]).
-pent(6,5,[ np, np, np,dnm,
-           np, np]).
-pent(6,6,[ np, np, np,dnm,
-          dnm, np, np]).
-pent(6,7,[     np,dnm,dnm,
-          dnm, np, np,dnm,
-          dnm, np, np]).
-pent(6,8,[     np,dnm,dnm,
-           np, np,dnm,dnm,
-           np, np]).
+% P P
+% P P 
+% P
+pent('P',1,[     np, np,dnm,
+             np, np, np]).
+pent('P',2,[     np, np,dnm,
+             dnm,np, np,dnm,
+             dnm,np]).
+pent('P',3,[ np, np,  p,dnm,
+             np, np, np]).
+pent('P',4,[ np, np,dnm,dnm,
+             np, np,dnm,dnm,
+            dnm, np]).
+pent('P',5,[ np, np, np,dnm,
+             np, np]).
+pent('P',6,[ np, np, np,dnm,
+            dnm, np, np]).
+pent('P',7,[     np,dnm,dnm,
+            dnm, np, np,dnm,
+            dnm, np, np]).
+pent('P',8,[     np,dnm,dnm,
+             np, np,dnm,dnm,
+             np, np]).
 
