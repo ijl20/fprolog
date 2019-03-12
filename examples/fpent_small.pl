@@ -36,11 +36,11 @@ solution(H) :-
 
 initial_state(state(Board,Pieces,[])) :-
     setof(P,A^B^pent(P,A,B),Pieces),
-    gen_board(20,Board).
+    gen_board(5,Board).
 
 % gen_board(N, Board) will generate a board of size 4 x N
 gen_board(0,[]).
-gen_board(N,[no_piece,no_piece,no_piece,border|T]) :-
+gen_board(N,[np,np,np,border|T]) :-
     N > 0,
     I is (N - 1),
     gen_board(I,T).
@@ -80,7 +80,7 @@ play_pent(Board,Pattern,New_Board) :-
 trim([],[]).
 trim([border|T],Board) :- trim(T,Board).
 trim([piece|T],Board) :- trim(T,Board).
-trim(Board,Board) :- Board = [no_piece|_].
+trim([np|Board],[np|Board]).
 
 % match(Board, Pattern, New_board) succeeds if Pattern
 % can be matched (see below) to start of Board and
@@ -96,9 +96,9 @@ match([piece|Tb],[op|Tp],[piece|Tnb]) :-
     match(Tb,Tp,Tnb).
 % match succeeds if Board no_piece matches pattern 'dnm' | 'np'
 % and rest of Board matches rest of Pattern
-match([no_piece|Tb],[np|Tp],[piece|Tnb]) :-
+match([np|Tb],[np|Tp],[piece|Tnb]) :-
     match(Tb,Tp,Tnb).
-match([no_piece|Tb],[dnm|Tp],[no_piece|Tnb]) :-
+match([np|Tb],[dnm|Tp],[np|Tnb]) :-
     match(Tb,Tp,Tnb).
 % match succeeds if Board border matches pattern 'dnm'
 % and rest of Board matches rest of Pattern
@@ -119,12 +119,6 @@ pent('C',3,[ np, np,dnm,dnm,
 pent('C',4,[ np, np,dnm,dnm,
             dnm, np,dnm,dnm,
              np, np]).
-%   X
-% X X X
-%   X
-pent('X',1,[     np, op,dnm,
-             np, np, np,dnm,
-            dnm, np]).
 % X 
 % X  
 % X X X
@@ -140,21 +134,6 @@ pent('L',3,[         np,dnm,
 pent('L',4,[ np, op, op,dnm,
              np, op, op,dnm,
              np, np, np]).
-% X X X
-%   X
-%  X 
-pent('T',1,[     np, op,dnm,
-             op, np, op,dnm,
-             np, np, np]).
-pent('T',2,[ np, op, op,dnm,
-             np, np, np,dnm,
-             np]).
-pent('T',3,[         np,dnm,
-             np, np, np,dnm,
-             dnm,dnm,np]).
-pent('T',4,[ np, np, np,dnm,
-            dnm, np,dnm,dnm,
-            dnm, np]).
 % 6
 % 6 6 
 % 6 6
@@ -178,131 +157,4 @@ pent(6,7,[     np,dnm,dnm,
 pent(6,8,[     np,dnm,dnm,
            np, np,dnm,dnm,
            np, np]).
-%     X
-%   X X
-% X X
-pent('M',1,[         np,dnm,
-             op, np, np,dnm,
-             np, np]).
-pent('M',2,[ np, op, op,dnm,
-             np, np, op,dnm,
-            dnm, np, np]).
-pent('M',3,[ np, np, op,dnm,
-            dnm, np, np,dnm,
-            dnm,dnm, np]).
-pent('M',4,[     np, np,dnm,
-             np, np,dnm,dnm,
-             np]).
-% X
-% X
-% X
-% X X  
-pent(l,1,[     np,dnm,dnm,
-          dnm, np,dnm,dnm,
-          dnm, np,dnm,dnm,
-           np, np]).
-pent(l,2,[ np,dnm,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np, np]).
-pent(l,3,[ np, np,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np]).
-pent(l,4,[ np, np,dnm,dnm,
-          dnm, np,dnm,dnm,
-          dnm, np,dnm,dnm,
-          dnm, np]).
-% X
-% X X
-% X
-% X
-pent(t,1,[ np,dnm,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np, np,dnm,dnm,
-           np]).
-pent(t,2,[ np,dnm,dnm,dnm,
-           np, np,dnm,dnm,
-           np,dnm,dnm,dnm,
-           np]).
-pent(t,3,[         np,dnm,
-          dnm,dnm, np,dnm,
-          dnm, np, np,dnm,
-          dnm,dnm, np]).
-pent(t,4,[     np,dnm,dnm,
-           np, np,dnm,dnm,
-          dnm, np,dnm,dnm,
-          dnm, np]).
-%   X X
-% X X
-%   X
-pent(f,1,[ np, np, op,dnm,
-          dnm, np, np,dnm,
-          dnm, np]).
-pent(f,2,[         np,dnm,
-           np, np, np,dnm,
-          dnm, np]).
-pent(f,3,[ np, op, op,dnm,
-           np, np, np,dnm,
-          dnm, np]).
-pent(f,4,[     np, np,dnm,
-           np, np,dnm,dnm,
-          dnm, np]).
-pent(f,5,[     np, op,dnm,
-           np, np, op,dnm,
-          dnm, np, np]).
-pent(f,6,[     np, op,dnm,
-           op, np, np,dnm,
-           np, np]).
-pent(f,7,[     np, op,dnm,
-           np, np, np,dnm,
-          dnm,dnm, np]).
-pent(f,8,[     np, op,dnm,
-           np, np, np,dnm,
-           np]).
-% X X
-%   X
-%   X X
-pent('Z',1,[     np, np,dnm,
-             op, np,dnm,dnm,
-             np, np]).
-pent('Z',2,[ np, np, op,dnm,
-            dnm, np, op,dnm,
-            dnm, np, np]).
-pent('Z',3,[ np, op, op,dnm,
-             np, np, np,dnm,
-            dnm,dnm, np]).
-pent('Z',4,[         np,dnm,
-             np, np, np,dnm,
-             np]).
-% X
-% X
-% X X
-%   X
-pent('S',1,[         np,dnm,
-            dnm,dnm, np,dnm,
-            dnm, np, np,dnm,
-            dnm, np]).
-pent('S',2,[     np,dnm,dnm,
-            dnm, np,dnm,dnm,
-            dnm, np, np,dnm,
-            dnm,dnm, np]).
-pent('S',3,[     np,dnm,dnm,
-            dnm, np, np,dnm,
-            dnm,dnm, np,dnm,
-            dnm,dnm, np]).
-pent('S',4,[     np,dnm,dnm,
-             np, np,dnm,dnm,
-             np,dnm,dnm,dnm,
-             np]).
-% X
-% X
-% X
-% X
-% X
-pent('I',1,[ np,dnm,dnm,dnm,
-             np,dnm,dnm,dnm,
-             np,dnm,dnm,dnm,
-             np,dnm,dnm,dnm,
-             np]).
 
