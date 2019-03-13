@@ -1,37 +1,147 @@
 % ijl20 pentominoes unify patterns with board
 % Pieces are e.g.
 
-pent('C',0,[['C','C'],
-            ['C', _ ],
-            ['C','C']]).
+pent('C',[['C','C'],
+          ['C', _ ],
+          ['C','C']]).
 
-pent('C',0,[['C','C','C'],
-            ['C', _ ,'C']]).
+pent('C',[['C','C','C'],
+          ['C', _ ,'C']]).
 
-pent('t',1,[[ _ ,'t'],
-            ['t','t'],
-            [ _ ,'t'],
-            [ _ ,'t']]).
+pent('t',[[ _ ,'t'],
+          ['t','t'],
+          [ _ ,'t'],
+          [ _ ,'t']]).
 
-pent('B',0,[['B','B'],
-            ['B','B','B']]).
+pent('t',[[ _ ,'t'],
+          [ _ ,'t'],
+          ['t','t'],
+          [ _ ,'t']]).
 
-pent('B',0,[['B'],
-            ['B','B'],
-            ['B','B']]).
+pent('t',[['t'],
+          ['t','t'],
+          ['t'],
+          ['t']]).
 
-pent('S',0,[['S', _ ],
-            ['S','S'],
-            [ _ ,'S'],
-            [ _ ,'S']]).
+pent('t',[['t'],
+          ['t'],
+          ['t','t'],
+          ['t']]).
 
-pents(['C','t','B','S']).
+pent('t',[['t','t','t','t'],
+          [ _ ,'t']]).
+
+pent('t',[['t','t','t','t'],
+          [ _ , _ ,'t']]).
+
+pent('t',[[ _ ,'t'],
+          ['t','t','t','t']]).
+
+pent('t',[[ _ , _ ,'t'],
+          ['t','t','t','t']]).
+
+pent('l',[['l','l','l','l'],
+          ['l']]).
+
+pent('l',[['l','l','l','l'],
+          [ _ , _ , _ ,'l']]).
+
+pent('l',[['l'],
+          ['l','l','l','l']]).
+
+pent('l',[[ _ , _ , _ ,'l'],
+          ['l','l','l','l']]).
+
+pent('l',[['l'],
+          ['l'],
+          ['l'],
+          ['l','l']]).
+
+pent('l',[['l','l'],
+          ['l'],
+          ['l'],
+          ['l']]).
+
+pent('l',[[ _ ,'l'],
+          [ _ ,'l'],
+          [ _ ,'l'],
+          ['l','l']]).
+
+pent('l',[['l'],
+          ['l'],
+          ['l'],
+          ['l','l']]).
+
+pent('B',[[ _ ,'B','B'],
+          ['B','B','B']]).
+
+pent('B',[['B','B','B'],
+          ['B','B']]).
+
+pent('B',[['B','B','B'],
+          [ _ ,'B','B']]).
+
+pent('B',[['B','B'],
+          ['B','B','B']]).
+
+pent('B',[['B'],
+          ['B','B'],
+          ['B','B']]).
+
+pent('B',[[ _ ,'B'],
+          ['B','B'],
+          ['B','B']]).
+
+pent('B',[['B','B'],
+          ['B','B'],
+          ['B']]).
+
+pent('B',[['B','B'],
+          ['B','B'],
+          [ _ ,'B']]).
+
+pent('S',[[ _ ,'S'],
+          ['S','S'],
+          ['S'],
+          ['S']]).
+
+pent('S',[['S', _ ],
+          ['S','S'],
+          [ _ ,'S'],
+          [ _ ,'S']]).
+
+pent('S',[[ _ ,'S'],
+          [ _ ,'S'],
+          ['S','S'],
+          ['S']]).
+
+pent('S',[['S'],
+          ['S'],
+          ['S','S'],
+          [ _ ,'S']]).
+
+% pents(['C','t','B','S','l']).
+pents(P) :- setof(Pent,Pattern^pent(Pent,Pattern),P).
 
 board([[_,_,_],
        [_,_,_],
        [_,_,_],
        [_,_,_],
        [_,_,_]]).
+
+% board(Rows,Cols,Board).
+board(0,_,[]).
+board(Rows,Cols,[Row|Board]) :- 
+    Rows > 0,
+    board_row(Cols,Row),
+    Rem_rows is Rows-1,
+    board(Rem_rows, Cols, Board).
+
+board_row(0,[]).
+board_row(Cols,[_|Row]) :- 
+    Cols > 0,
+    Rem_cols is Cols-1,
+    board_row(Rem_cols,Row).
 
 % place_row_col(Pattern,Board,Row,Col)
 % Succeeds if can place (i.e. unify) a 'Piece Pattern' on the Board with first 'empty' cell (i.e.
@@ -55,11 +165,18 @@ free_row_col([_|Bs],Row,Col) :- free_row_col(Bs,R,Col), Row is R + 1.
 free_col([B|_],0) :- \+ atom(B), !.
 free_col([_|Bs],Col) :- free_col(Bs,C), Col is C + 1.
 
+% offset(P, N) succeeds if first occupied cell of pattern P row 0 is at index N.
+offset([R|_],Offset) :- row_offset(R,Offset).
+
+row_offset([P|_],0) :- atom(P).
+row_offset([X|P],Offset) :- \+ atom(X), row_offset(P,N), Offset is N+1.
+
 % place(Pieces,Board) succeeds if we can fill Board with unique Pieces
 place([Piece|Pieces],Board) :- 
     free_row_col(Board,Free_row,Free_col), 
     select(Pn,[Piece|Pieces],Rem_pieces),
-    pent(Pn,Offset,Pattern),
+    pent(Pn,Pattern),
+    offset(Pattern,Offset),
     Col is Free_col-Offset,
     Col >= 0,
     place_row_col(Pattern,Board,Free_row,Col), 
@@ -83,5 +200,5 @@ print_board_row([]) :- nl.
 print_cell(C) :- atom(C), print(' '), print(C).
 print_cell(C) :- \+ atom(C), print(' '), print('_').
 
-solution(Board) :- board(Board),pents(Pents),place(Pents,Board).
+solution(Board) :- board(4,5,Board),pents(Pents),place(Pents,Board).
 
