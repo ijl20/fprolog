@@ -27,6 +27,11 @@
 % e.g. pents(P) will succeed with P=['C','t','b','S','l','+'] with the actual
 % atoms derived from the pent(name,Pattern) clause at the end of this code.
 %
+%  C C    +    L      T T T  b    M M    l    t      f f  Z Z    S    I
+%  C    + + +  L        T    b b    M M  l    t t  f f      Z    S    I
+%  C C    +    L L L    T    b b      M  l    t      f      Z Z  S S  I
+%                                        l l  t                    S  I
+%                                                                     I
 % pents(P) succeeds with P as list of unique Piece id's.
 pents(P) :- setof(Pent,Pattern^pent(Pent,Pattern),P).
 
@@ -115,6 +120,8 @@ solution(Board) :-
 
 
 % Pentomino pieces
+% C + L T b S l t M f Z I
+%
 
 pent('C',[['C','C'|_],
           ['C', _ |_],
@@ -257,4 +264,36 @@ pent('S',[[ _ , _ ,'S','S'|_],
 pent('+',[[ _ ,'+', _ |_],
           ['+','+','+'|_],
           [ _ ,'+'|_]]).
+
+pent('L',[['L'],
+          ['L'],
+          ['L','L','L']]).
+
+pent('L',[['L','L','L'],
+          ['L'],
+          ['L']]).
+
+pent('L',[['L','L','L'],
+          [ _ , _ ,'L'],
+          [ _ , _ ,'L']]).
+
+pent('L',[[ _ , _ ,'L'],
+          [ _ , _ ,'L'],
+          ['L','L','L']]).
+
+pent('T',[[ _ ,'T'],
+          [ _ ,'T'],
+          ['T','T','T']]).
+
+pent('T',[['T'],
+          ['T','T','T'],
+          ['T']]).
+
+pent('T',[['T','T','T'],
+          [ _ ,'T'],
+          [ _ ,'T']]).
+
+pent('T',[[ _ , _ ,'T'],
+          ['T','T','T'],
+          [ _ , _ ,'T']]).
 
