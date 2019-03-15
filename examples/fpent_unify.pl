@@ -32,9 +32,18 @@
 %  C C    +    L L L    T    b b      M  l    t      f      Z Z  S S  I
 %                                        l l  t                    S  I
 %                                                                     I
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Collect the pentomino patterns %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % pents(P) succeeds with P as list of unique Piece id's.
 pents(P) :- setof(Pent,Pattern^pent(Pent,Pattern),P).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Create the board             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % board(Rows,Cols,Board) succeeds with Board as a list of Rows lists of Cols free vars.
 % e.g. board(5,3,Board) succeeds with
 % Board = [[_,_,_],
@@ -55,6 +64,10 @@ board_row(Cols,[_|Row]) :-
     Cols > 0,
     Rem_cols is Cols-1,
     board_row(Rem_cols,Row).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place pieces on board %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % place_row_col(Pattern,Board,Row,Col)
 % Succeeds if can place (i.e. unify) a 'Piece Pattern' on the Board with first 'empty' cell (i.e.
@@ -94,7 +107,8 @@ place([Piece|Pieces],Board) :-
     Col is Free_col-Offset,
     Col >= 0,
     place_row_col(Pattern,Board,Free_row,Col), 
-    ( place(Rem_pieces,Board) -> true ; print_board(Board), nl, fail ).
+    %    ( place(Rem_pieces,Board) -> true ; print_board(Board), nl, fail ).
+    place(Rem_pieces,Board).
 % Ultimate success condition is there are no free cells left in Board
 % Note an alternative success condition can be
 % place([],_). i.e. we have placed ALL the pieces - this is only suitable for
@@ -112,12 +126,13 @@ print_board_row([]) :- nl.
 print_cell(C) :- atom(C), print(' '), print(C).
 print_cell(C) :- \+ atom(C), print(' '), print('_').
 
-solution(Board) :- 
-    board(5,6,Board),
+solution(Board) :- solution(6,10,Board).
+
+solution(Rows,Cols,Board) :-
+    board(Rows,Cols,Board),
     pents(Pents),
     place(Pents,Board),
     print_board(Board),nl.
-
 
 % Pentomino pieces
 % C + L T b S l t M f Z I
@@ -265,35 +280,107 @@ pent('+',[[ _ ,'+', _ |_],
           ['+','+','+'|_],
           [ _ ,'+'|_]]).
 
-pent('L',[['L'],
-          ['L'],
-          ['L','L','L']]).
+pent('L',[['L'|_],
+          ['L'|_],
+          ['L','L','L'|_]]).
 
-pent('L',[['L','L','L'],
-          ['L'],
-          ['L']]).
+pent('L',[['L','L','L'|_],
+          ['L'|_],
+          ['L'|_]]).
 
-pent('L',[['L','L','L'],
-          [ _ , _ ,'L'],
-          [ _ , _ ,'L']]).
+pent('L',[['L','L','L'|_],
+          [ _ , _ ,'L'|_],
+          [ _ , _ ,'L'|_]]).
 
-pent('L',[[ _ , _ ,'L'],
-          [ _ , _ ,'L'],
-          ['L','L','L']]).
+pent('L',[[ _ , _ ,'L'|_],
+          [ _ , _ ,'L'|_],
+          ['L','L','L'|_]]).
 
-pent('T',[[ _ ,'T'],
-          [ _ ,'T'],
-          ['T','T','T']]).
+pent('T',[[ _ ,'T'|_],
+          [ _ ,'T'|_],
+          ['T','T','T'|_]]).
 
-pent('T',[['T'],
-          ['T','T','T'],
-          ['T']]).
+pent('T',[['T'|_],
+          ['T','T','T'|_],
+          ['T'|_]]).
 
-pent('T',[['T','T','T'],
-          [ _ ,'T'],
-          [ _ ,'T']]).
+pent('T',[['T','T','T'|_],
+          [ _ ,'T'|_],
+          [ _ ,'T'|_]]).
 
-pent('T',[[ _ , _ ,'T'],
-          ['T','T','T'],
-          [ _ , _ ,'T']]).
+pent('T',[[ _ , _ ,'T'|_],
+          ['T','T','T'|_],
+          [ _ , _ ,'T'|_]]).
+
+pent('M',[['M','M'|_],
+          [ _ ,'M','M'|_],
+          [ _ , _ ,'M'|_]]).
+
+pent('M',[[ _ , _ ,'M'|_],
+          [ _ ,'M','M'|_],
+          ['M','M'|_]]).
+
+pent('M',[['M'|_],
+          ['M','M'|_],
+          [ _ ,'M','M'|_]]).
+
+pent('M',[[ _ ,'M','M'|_],
+          ['M','M'|_],
+          ['M'|_]]).
+
+pent('f',[[ _ ,'f'|_],
+          [ _ ,'f','f'|_],
+          ['f','f'|_]]).
+
+pent('f',[['f'|_],
+          ['f','f','f'|_],
+          [ _ ,'f'|_]]).
+
+pent('f',[[ _ ,'f','f'|_],
+          ['f','f'|_],
+          [ _ ,'f'|_]]).
+
+pent('f',[[ _ ,'f'|_],
+          ['f','f','f'|_],
+          [ _ , _ ,'f'|_]]).
+
+pent('f',[[ _ ,'f'|_],
+          ['f','f'|_],
+          [ _ ,'f','f'|_]]).
+
+pent('f',[[ _ , _ ,'f'|_],
+          ['f','f','f'|_],
+          [ _ ,'f'|_]]).
+
+pent('f',[['f','f'|_],
+          [ _ ,'f','f'|_],
+          [ _ ,'f'|_]]).
+
+pent('f',[[ _ ,'f'|_],
+          ['f','f','f'|_],
+          ['f'|_]]).
+
+pent('Z',[[ _ ,'Z','Z'|_],
+          [ _ ,'Z'|_],
+          ['Z','Z'|_]]).
+
+pent('Z',[['Z'|_],
+          ['Z','Z','Z'|_],
+          [ _ , _ ,'Z'|_]]).
+
+pent('Z',[['Z','Z'|_],
+          [ _ ,'Z'|_],
+          [ _ ,'Z','Z'|_]]).
+
+pent('Z',[[ _ , _ ,'Z'|_],
+          ['Z','Z','Z'|_],
+          ['Z'|_]]).
+
+pent('I',[['I','I','I','I','I'|_]]).
+
+pent('I',[['I'|_],
+          ['I'|_],
+          ['I'|_],
+          ['I'|_],
+          ['I'|_]]).
 
