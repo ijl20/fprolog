@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  21 FEB 2019 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  29 APR 2019 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,7 +360,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Here is how much of TeX's memory you used:
  1862 strings out of 494923
  26170 string characters out of 6180741
- 95685 words of memory out of 5000000
+ 95659 words of memory out of 5000000
  5143 multiletter control sequences out of 15000+600000
  12934 words of font info for 52 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
@@ -383,7 +383,7 @@ nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/latxfont/lasy10.pfb>
-Output written on fprolog.pdf (38 pages, 307481 bytes).
+Output written on fprolog.pdf (38 pages, 306396 bytes).
 PDF statistics:
  201 PDF objects out of 1000 (max. 8388607)
  141 compressed objects within 2 object streams
