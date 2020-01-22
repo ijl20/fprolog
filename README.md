@@ -1,3 +1,47 @@
+# `fprolog` - Functional Prolog
+
+`fprolog` extends standard prolog to allow function declarations, with a syntax similar to that used in
+functional languages such as ML.
+
+## Example run of an fprolog program
+
+Example fprolog source (`examples/max.pl`):
+```
+% Function max2(X,Y) returns greater of X or Y
+fun max2(X,Y) = if (X > Y) then X else Y.
+
+% Function max(L) returns maximum element in list L
+fun max([X]) = X;
+    max([X|L]) = max2(X,max(L)).
+
+% Relation max(L,N) succeeds if N is the maximum element in list L
+max(L,N) :- N = max(L).
+```
+
+And here is how we 'run' that `fprolog` program:
+
+```
+$ prolog
+
+Welcome to SWI-Prolog (threaded, 64 bits, version 7.6.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [fprolog].
+true.
+
+?- fconsult('examples/max.pl').
+true.
+
+?- max([1,3,4,7,3,5],N).
+N = 7.
+
+?- 
+```
+
 # File sources from ijl20 cl filer archive
 
 These are the latest versions of the ORIGINAL PrologPF files from the Computer Lab filer (ijl20).
